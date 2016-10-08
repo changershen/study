@@ -1,0 +1,9 @@
+# git config --global credential.helper winstore // WinNT,https://gitcredentialstore.codeplex.com/,put in /git/usr/bin
+
+
+cd ***
+git init
+git add .
+git commit -m "add a project"
+git remote add origin https://github.com/changershen/javaLog.git
+git push -u origin master
