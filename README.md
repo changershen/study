@@ -1,1 +1,1 @@
-hello git world!
+this is just a log for study git.

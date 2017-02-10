@@ -7,3 +7,109 @@ git add .
 git commit -m "add a project"
 git remote add origin https:***
 git push -u origin master
+
+
+创建版本库
+mkdir **——创建工作目录
+cd **——进入文件夹
+pwd ——显示当前目录
+
+仓库初始化：
+git init——把目录变成git可管理的仓库
+ls -ah——显示隐藏的目录文件
+
+添加文件到git仓库：
+git add **——创建一个文件在仓库中
+git commit -m “说明”——把文件提交到仓库中-m是本次提交说明，方便管理改动记录
+
+git status——查看仓库的状态
+git checkout **——放弃文件的修改，已删除文件的恢复
+git diff **——查看文件修改的地方
+
+版本回退
+git log——显示提交日志
+git log --pretty=oneline——显示缩略信息
+git log --pretty=oneline --abbrev-commit ——显示缩略的信息
+git reset --hard commit-id——版本回退
+HEAD为当前的版本：HEAD^上一个版本，HEAD^^上上一个版本
+git reflog——查看命令历史，可以查看未来的版本
+
+已编辑未git add的文件回退：
+git checkout **
+编辑且放到暂存区的文件回退：
+git reset HEAD  **
+git checkout **
+
+名词解释：
+工作区：一个文件夹就是一个工作区
+版本库：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。
+
+rm **——移除文件
+方法一从版本库中删除该文件
+git rm **
+方法二错删
+git checkout -- **——
+
+创建公匙
+$ ssh-keygen -t rsa -C "youremail@example.com"
+
+将本地的仓库推送到远程库
+git push -u origin master
+git push origin master 之后的跟新
+
+克隆仓库
+git clone URL 
+
+分支管理
+git checkout -b dev=git branch dev + git checkout dev
+git branch：查看分支：
+git branch <name>创建分支：
+git checkout <name>切换分支：
+git checkout -b <name>创建+切换分支：
+git merge <name>合并某分支到当前分支：
+git branch -d <name>删除分支：
+git branch -D <name>强行删除
+
+冲突在子分支上进行一次commit，然后再master上进行一次commit，然后分支合并
+出现异常需要手动去编辑文本然后再次add commit。
+git merge --no-ff -m "merge with no-ff" dev合并分支
+--no-ff禁止使用fast forward用普通模式合并后历史有分支可以看到修改的历史
+
+bug分支
+git stash 藏分支
+git stash apply恢复不删除stash里面的内容，
+git stash drop删除stash里面的内容
+git pop 恢复内容，删除stash里面的内容
+
+多人协作的工作模式
+首先，可以试图用git push origin branch-name推送自己的修改；
+如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；
+如果合并有冲突，则解决冲突，并在本地提交；
+没有冲突或者解决掉冲突后，再用git push origin branch-name推送就能成功！
+如果git pull提示“no tracking information”，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream branch-name origin/branch-name。
+这就是多人协作的工作模式，一旦熟悉了，就非常简单。
+
+查看远程库信息，使用git remote -v；
+本地新建的分支如果不推送到远程，对其他人就是不可见的；
+从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交
+在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；
+建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；
+从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。
+
+标签管理
+git tag <name>用于新建一个标签，默认为HEAD，也可以指定一个commit id；  
+git tag -a <tagname> -m "blablabla..."可以指定标签信息；已存在的标签不能使用  
+git tag -s <tagname> -m "blablabla..."可以用PGP签名标签；已存在的标签不能使用
+git tag可以查看所有标签。
+git push origin <tagname>可以推送一个本地标签；
+git push origin --tags可以推送全部未推送过的本地标签；
+git tag -d <tagname>可以删除一个本地标签；
+git push origin :refs/tags/<tagname>可以删除一个远程标签。
+
+别名管理：位置为用户主目录下的.git/config
+--global为全局，不加的话为当前的仓库
+git config --global alias.st status将status配置为st
+
+git config --global color.ui true 颜色配置
+忽略某些文件时，需要编写.gitignore；
+.gitignore文件本身要放到版本库里，并且可以对.gitignore做版本管理！
