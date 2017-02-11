@@ -1,0 +1,4455 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js no-pass-type ie6 oldie" id="unsupported" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js no-pass-type ie7 oldie" id="unsupported" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js no-pass-type ie8 oldie" id="unsupported" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js no-pass-type ie9" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+<head>
+<title>Tech specs | Zendesk</title>
+<script>
+    // Create ga object before optimizely loads, since the snippet for
+    // analytics.js is being loaded async through GTM
+    window.ga = window.ga || function() {
+      (window.ga.q = window.ga.q || []).push(arguments)
+    };
+  </script>
+<script src="//cdn.optimizely.com/js/112699136.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta charset="UTF-8"/>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<meta name="google-site-verification" content="2q8u-0_6HxJZdS7l7LYlf-WDEYwIPvdJ_XVujkTFNCY"/>
+<meta name="viewport" content="width=device-width">
+<!--[if lt IE 9]>
+      <script src="//d26a57ydsghvgx.cloudfront.net/www/public/assets/js/css3-mediaqueries.js"></script>
+    <![endif]-->
+<link rel="profile" href="https://gmpg.org/xfn/11"/>
+<link rel="dns-prefetch" href="//d16cvnquvjw7pr.cloudfront.net">
+<link rel="dns-prefetch" href="//ajax.googleapis.com">
+<link rel="shortcut icon" href="//d1eipm3vz40hy0.cloudfront.net/images/logos/zendesk-favicon.ico"/>
+ 
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="//d26a57ydsghvgx.cloudfront.net/www/public/assets/images/logos/zendesk144.png">
+ 
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="//d26a57ydsghvgx.cloudfront.net/www/public/assets/images/logos/zendesk114.png">
+ 
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="//d26a57ydsghvgx.cloudfront.net/www/public/assets/images/logos/zendesk72.png">
+ 
+<link rel="apple-touch-icon-precomposed" href="//d26a57ydsghvgx.cloudfront.net/www/public/assets/images/logos/zendesk57.png">
+<meta property="og:image" content="https://d16cvnquvjw7pr.cloudfront.net/images/blog/zendesk-default-placeholder.jpg"/>
+<meta category="og:category" content=""/>
+ 
+<link rel="canonical" href="https://www.zendesk.com/product/tech-specs/"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Tech specs - Zendesk"/>
+<meta property="og:description" content="Tech Specs What Zendesk is made of Description Built For Show All Show All Customers Agents Admins Starts At Show All Show All Essential Team Professional Enterprise Add-on Getting Started Customer Support Communication Channels Email Your Zendesk Support has its own email domain and supports any number of email addresses. All emails sent to Zendesk [&hellip;]"/>
+<meta property="og:url" content="https://www.zendesk.com/product/tech-specs/"/>
+<meta property="og:site_name" content="Zendesk"/>
+ 
+<link href="https://d1eipm3vz40hy0.cloudfront.net/css/screen.min.2cb17ed3.css" media="screen" rel="stylesheet" type="text/css"/><link href="https://d1eipm3vz40hy0.cloudfront.net/css/tech-specs.min.d2218ec3.css" media="screen" rel="stylesheet" type="text/css"/> 
+<link rel="alternate" hreflang="en" href="https://www.zendesk.com/product/tech-specs/"/>
+<link rel="alternate" hreflang="it" href="https://www.zendesk.it/product/tech-specs/"/>
+<link rel="alternate" hreflang="ru" href="https://www.zendesk.com.ru/product/tech-specs/"/>
+<link rel="alternate" hreflang="nl" href="https://www.zendesk.nl/product/tech-specs/"/>
+<link rel="alternate" hreflang="fr" href="https://www.zendesk.fr/product/tech-specs/"/>
+<link rel="alternate" hreflang="es-es" href="https://www.zendesk.es/product/tech-specs/"/>
+<link rel="alternate" hreflang="es-mx" href="https://www.zendesk.com.mx/product/tech-specs/"/>
+<link rel="alternate" hreflang="pt" href="https://www.zendesk.com.br/product/tech-specs/"/>
+<link rel="alternate" hreflang="de" href="https://www.zendesk.de/product/tech-specs/"/>
+<link rel="alternate" hreflang="x-default" href="https://www.zendesk.com/product/tech-specs/"/> 
+</head>
+<body data-useragent class="lang-en responsive " lang="en-US">
+ 
+<script type="text/javascript">
+  window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+  heap.load("1646711747");
+</script>
+ 
+<script type="text/javascript">
+  (function() {
+    var loadConvertro = function() {
+      (function(c){var e=document.createElement("script");
+      e.type='text/javascript';e.async=true;
+      e.src='//d1ivexoxmp59q7.cloudfront.net/'+c+'/live.js';
+      var n=document.getElementsByTagName('script')[0];
+      n.parentNode.insertBefore(e,n);})('zendesk');
+    };
+
+    if (!window.potentialBot) {
+      loadConvertro();
+    }
+  }());
+</script>
+<header class="masthead-refresh  " role="banner">
+<div class="masthead-top">
+<div class="secondary-menu menu">
+<a class="secondary-menu-item" href="/login/">Log In</a>
+<a class="secondary-menu-item" href="//help.zendesk.com/">Product Support</a>
+<ul class="secondary-menu-item company">
+<li class="first">
+<a href="#">Company<span class="ent-text"></span></a>
+<ul class="list-sub">
+<span class="pin"></span>
+<li class="list-item"><a href="/about/">About us</a></li>
+<li class="list-item"><a href="/company/press/">Press</a></li>
+<li class="list-item SL_norewrite"><a href="//investor.zendesk.com/">Investors</a></li>
+<li class="list-item SL_norewrite"><a href="/company/events/">Events</a></li>
+<li class="list-item"><a href="/jobs/">Careers</a></li>
+<li class="list-item"><a href="/company/contact-info/">Legal</a></li>
+</ul>
+</li>
+</ul>
+<a class="secondary-menu-item" href="/support/contact/">Contact Us</a>
+</div>  
+<div class="masthead-stuck-target">
+<div class="js-stuck-inner">
+<header class="site-title">
+<a href="/" class="zendesk-logo" rel="home"></a>
+</header>
+<div class="primary-menu menu">
+<div class="primary-menu-anchor"></div>
+<nav class="primary-menu-list-wrap">
+<ul id="menu-header-navigation-mini" class="primary-menu-list">
+ 
+<li id="smartling-nvg-product" class="SL_swap menu-item list-parent ">
+<a href="/product/tour/" class="menu-heading link-tier-1">Products</a>
+<div class="pin-container"><span class="pin"></span></div>
+<div class="primary-menu-list-dropdown">
+<section>
+<div class="col-5">
+<h2>The Zendesk Family</h2>
+<p>The Zendesk family of products work together to help you improve customer relationships</p>
+</div>
+<div class="col-5">
+<ul>
+<a href="/support/">
+<li class="support-product">
+<span class='product-logo'></span>
+<h4>support</h4>
+<p class="product-subheader">Multi-channel customer service</p>
+</li>
+</a>
+<a href="/help-center/">
+<li class="help-product">
+<span class='product-logo'></span>
+<h4>help&nbsp;center</h4>
+<p class="product-subheader">Knowledge base and self-service</p>
+</li>
+</a>
+</ul>
+</div>
+<div class="col-5">
+<ul>
+<a href="/chat/">
+<li class="chat-product">
+<span class='product-logo'></span>
+<h4>chat</h4>
+<p class="product-subheader">Live chat software</p>
+</li>
+</a>
+<a href="/talk/">
+<li class="talk-product">
+<span class='product-logo'></span>
+<h4>talk</h4>
+<p class="product-subheader">Integrated call center software</p>
+</li>
+</a>
+<a href="/message/">
+<li class="message-product">
+<span class='product-logo'></span>
+<h4>message</h4><span class="new-button">new</span>
+<p class="product-subheader">Social messaging apps</p>
+</li>
+</a>
+</ul>
+</div>
+<div class="col-5">
+<ul>
+<a href="/explore/">
+<li class="explore-product">
+<span class='product-logo'></span>
+<h4>explore</h4><span class="new-button">new</span>
+<p>Analytics and reporting</p>
+</li>
+</a>
+<a href="/connect/">
+<li class="connect-product">
+<span class='product-logo'></span>
+<h4>connect</h4><span class="new-button">new</span>
+<p>Segmentation and targeting</p>
+</li>
+</a>
+<a href="/inbox/">
+<li class="inbox-product">
+<span class='product-logo'></span>
+<h4>inbox</h4>
+<p class="product-subheader">Shared team inbox</p>
+</li>
+</a>
+</ul>
+</div>
+<ul class="bottom-options">
+<li class="title">
+<h3>The flexibility to go even further:</h3>
+</li>
+<li>
+<a href="/apps/"><h3>Zendesk Apps Marketplace</h3></a>
+</li>
+<li>
+<a href="/embeddables/"><h3>Embeddables</h3></a>
+</li>
+</ul>
+</section>
+</div>
+</li>
+<li id="smartling-nvg-pricing" class="SL_swap menu-item list-parent "><a class="menu-heading link-tier-1" href="/product/pricing/">Pricing</a></li>
+<li id="smartling-nvg-demo" class="SL_swap menu-item list-parent "><a class="menu-heading link-tier-1" href="/demo/">Demo</a></li>
+<li id="smartling-nvg-solutions" class="SL_swap menu-item list-parent ">
+<a class="menu-heading link-tier-1" href="/enterprise/">Solutions</a>
+<div class="pin-container"><span class="pin"></span></div>
+<div class="primary-menu-list-dropdown">
+<section>
+<div class="col-5">
+<h2>Solutions</h2>
+<p class="solution-subheader">The Zendesk family of products helps improve relationships with customers and employees, for companies big and small</p>
+</div>
+<div class="col-5">
+<ul>
+<a href="/enterprise/">
+<li>
+<h5>Customer support for enterprise<h5>
+<p class="solution-subheader">Innovation, security, and integration—at scale</p>
+</li>
+</a>
+<a href="/smb/">
+<li>
+<h5>Support for growing businesses<h5>
+<p class="solution-subheader">Flexibility to start small and grow</p>
+</li></a>
+</ul>
+</div>
+<div class="col-5">
+<ul>
+<a href="/internal-help-desk/">
+<li>
+<h5>Internal service desk for employees<h5>
+<p class="solution-subheader">Service desks for HR, IT, and more </p>
+</li>
+</a>
+<a href="/mobile-solutions/">
+<li>
+<h5>Customer support for mobile<h5>
+<p class="solution-subheader">Engage with customers everywhere</p>
+</li></a>
+</ul>
+</div>
+</section>
+</div>
+</li>
+<li id="smartling-nvg-customers" class="SL_swap menu-item list-parent "><a class="menu-heading link-tier-1" href="/customer-experience/">Services</a></li>
+<li id="smartling-nvg-resources" class="SL_swap menu-item list-parent ">
+<a class="menu-heading link-tier-1" href="/resources/">Resources</a>
+<div class="pin-container"><span class="pin"></span></div>
+<div class="primary-menu-list-dropdown">
+<section>
+<div class="col-5">
+<h2>Resources</h2>
+<p>Learn more about Zendesk and how to create a better customer experience</p>
+</div>
+<div class="col-5">
+<ul>
+<a href="/resources/">
+<li>
+<h5>Library<h5>
+<p>Guides, research, videos, and resources</p>
+</li>
+</a>
+<a href="/blog/">
+<li>
+<h5>Blog<h5>
+<p>News, tips, and best practices</p>
+</li>
+</a>
+<a href="/why-zendesk/customers/">
+<li>
+<h5>Customer Stories<h5>
+<p>See what success with Zendesk looks like</p>
+</li>
+</a>
+</ul>
+</div>
+<div class="col-5">
+<ul>
+<a href="/company/events/">
+<li>
+<h5>Events<h5>
+<p>Come meet us in person</p>
+</li>
+</a>
+<a href="/support/webinars/">
+<li>
+<h5>Live Webinars<h5>
+<p>Online events</p>
+</li>
+</a>
+<a href="//relate.zendesk.com/">
+<li>
+<h5>Relate by Zendesk<h5>
+<p>Customers. Colleagues. Community. It&apos;s complicated.</p>
+</li>
+</a>
+</ul>
+</div>
+<div class="col-5">
+<ul>
+<a href="/partner/">
+<li>
+<h5>Partners<h5>
+<p>How to locate or become a Zendesk partner</p>
+</li>
+</a>
+<a href="//developer.zendesk.com/">
+<li>
+<h5>API &#038; Developers<h5>
+<p>Info for building things with Zendesk</p>
+</li>
+</a>
+</ul>
+</div>
+</section>
+</div>
+</li>
+<li class="list-parent register-desktop"><a href="/register/" id="nav-get-started"><span class="register">Get Started</span></a></li>
+<li class="register-mobile">
+<a id="nav-get-started-mobile" href="/register/">Get Started</a>
+</li>
+</ul>
+ 
+</nav>
+ 
+</div>
+ 
+</div>
+</div>
+</div>  
+<div class="clearfix"></div>
+</header>
+<article class="tech-specs">
+<div class="container">
+<div class="head-title center">
+<h1>Tech Specs</h1>
+<h2>What Zendesk is made of</h2>
+</div>
+<div class="table">
+<p> </p>
+<div class="row head">
+<div class="col col-1"></div>
+<div class="col col-2">Description</div>
+<div class="col col-3">
+<div>Built For</div>
+<div class="selector built-for">
+<div class="selected" data-selected="all">Show All</div>
+<div class="options">
+<ul>
+<li><a href="javascript:;" data-show="all">Show All</a></li>
+<li><a href="javascript:;" data-show="customers">Customers</a></li>
+<li><a href="javascript:;" data-show="agents">Agents</a></li>
+<li><a href="javascript:;" data-show="admins">Admins</a></li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p> </p>
+</div>
+<p> </p>
+<div class="col col-4">
+<div>Starts At</div>
+<div class="selector starts-at">
+<div class="selected" data-selected="all">Show All</div>
+<div class="options">
+<ul>
+<li><a href="javascript:;" data-show="all">Show All</a></li>
+<li><a href="javascript:;" data-show="essential">Essential</a></li>
+<li><a href="javascript:;" data-show="team">Team</a></li>
+<li><a href="javascript:;" data-show="professional">Professional</a></li>
+<li><a href="javascript:;" data-show="enterprise">Enterprise</a></li>
+<li><a href="javascript:;" data-show="add-on">Add-on</a></li>
+</ul>
+</div>
+<p> </p>
+</div>
+<p> </p>
+</div>
+<p> </p>
+<div class="col col-5">Getting Started</div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<p> </p>
+<div class="row subtitle" id="communication-channels">
+<div class="inner">
+<div class="title">Customer Support</div>
+<div class="desc">Communication Channels</div>
+</div>
+</div>
+<p> </p>
+<div class="row odd customers agents admins essential">
+<div class="col col-1">Email</div>
+<div class="col col-2">Your Zendesk Support has its own email domain and supports any number of email addresses. All emails sent to Zendesk Support become tickets. You can set your reply (from) address for outgoing email. Also, you can customize the HTML and text email templates.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20519926-Getting-started-with-email-in-Zendesk">Get started with email</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers agents admins essential">
+<div class="col col-1">Twitter</div>
+<div class="col col-2">Convert tweets, DMs, and faves into Zendesk Support tickets. Zendesk Support can monitor one or more Twitter accounts and convert tweets to tickets as needed. All tweet activity between agents and Twitter users is added as ticket comments.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203661546-Setting-up-your-Twitter-channel">Set up Twitter</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers agents admins essential">
+<div class="col col-1">Facebook</div>
+<div class="col col-2">Convert Facebook wall posts and private messages into Zendesk Support tickets. On the Essential Plan, you can link one Facebook Page to Zendesk Support. On Team, Professional, and Enterprise Plans, you can add up to two Facebook Pages.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/21426726-Setting-up-your-Facebook-channel">Set up Facebook</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers agents admins add-on">
+<div class="col col-1">Chat</div>
+<div class="col col-2">Provide real-time support to your customers and proactively initiate chats with visitors on your website. With tools like shortcuts and agent-to-agent chat, collaborating on multiple chat conversations is a breeze for your support agents.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/57477487-Zopim-chat-app">Provide Chat support</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers agents admins essential">
+<div class="col col-1">Web Widget</div>
+<div class="col col-2">Embed support wherever your customers are on your website. Allow them to search the knowledge base, send a message, or start a live chat.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203908456-Using-Web-Widget-to-embed-customer-service-in-your-website#topic_pp3_pgd_bq">Set up Web Widget</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row subtitle" id="Talk">
+<div class="inner">
+<div class="title">Customer Support</div>
+<div class="desc">Talk</div>
+</div>
+</div>
+<p> </p>
+<div class="row odd customers agents admins add-on">
+<div class="col col-1">Embedded phone support</div>
+<div class="col col-2">Phone support software that allows agents to make or receive concurrent customer calls right from Zendesk Support. Calls and voicemails automatically create tickets for easy tracking and resolution. Agents may take calls in the Zendesk Support browser or forward calls to external phone numbers. </div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="https://www.zendesk.com/blog/5-easy-steps-trialing-voice-support/">Talk resources</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers agents admins add-on">
+<div class="col col-1">Local &#038; toll-free numbers</div>
+<div class="col col-2">Support a global business: select a local or toll-free phone number from over 40 different countries or port existing phone numbers. In some countries, port in an existing number (porting currently available in North America).</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203906366-Managing-numbers-in-Zendesk-Voice">Manage numbers</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers agents admins add-on">
+<div class="col col-1">Multiple greetings</div>
+<div class="col col-2">Offer branded or localized experiences with multiple customized greetings. Record new messages via phone or upload existing audio files for voicemail greetings, available agents, wait, hold and IVR messages. Both WAV and MP3 files are supported with a maximum file size of 10 MB.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203661476-Configuring-Zendesk-Voice#topic_aqm_zcv_ld">Set up greetings</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers agents admins add-on">
+<div class="col col-1">Full call control</div>
+<div class="col col-2">Mute, hold and transfer are available to agents in the call console. With warm transfer, deliver smooth agent hand-offs and reduce customer effort with warm transfer. Place a caller on hold to consult with another agent before transferring or returning to the customer. </div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203690836-Taking-inbound-telephone-calls-with-Zendesk-Talk">Use Talk</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers agents admins add-on">
+<div class="col col-1">Queue management</div>
+<div class="col col-2">Set queue size to determine how many incoming callers will be kept waiting for an available agent. New calls that exceed this limit are directed to voicemail. Set maximum queue wait time to determine how long customers may wait before leaving a voicemail.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203661686#id_ykn_ltf_tp">Set queues</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers agents admins add-on">
+<div class="col col-1">Inbound caller ID</div>
+<div class="col col-2">Know who is calling with user information in the call console for incoming calls. Calls received from new, unknown users generate new user accounts. Contact details and full multi-channel support history are at agents&#8217; fingertips during a call for easy reference. </div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203690836-Taking-inbound-telephone-calls-with-Zendesk-Voice">Using Talk</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers agents admins add-on">
+<div class="col col-1"> Group routing</div>
+<div class="col col-2">Route calls to specific groups or to a set of groups in Zendesk Support, so callers reach the right agents for help. If more than one group is selected, the call will route to agents in the primary group first, then to agents in the secondary groups via round-robin. </div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203661476-Configuring-Zendesk-Voice#topic_tmb_jrs_1k">Route calls</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers agents admins add-on">
+<div class="col col-1">IVR (interactive voice response) systems</div>
+<div class="col col-2">With multi-level interactive voice response (IVR), or phone trees, route customers to the right agent or department and provide recorded responses for frequently asked questions. Create a menu with options callers can choose through keypresses. Build a simple phone tree with one level or layer multiple menu levels together.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/214630317-Routing-incoming-calls-with-IVR-Advanced-Voice-only-">Create an IVR</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers agents admins add-on">
+<div class="col col-1">Call &#038; voicemail recording</div>
+<div class="col col-2">Record inbound and outbound calls and voicemails to reference past conversations and ensure compliance with quality standards. Set expiration dates for call and voicemail recordings, ranging from 1 week to 2 years. Enable voicemail transcription per phone number for easy reference and fast resolution. Currently available in English only. </div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/213857708-Managing-recording-options-in-Voice">Managing recording options</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers agents admins add-on">
+<div class="col col-1">Real-time dashboards</div>
+<div class="col col-2">Stay informed of call activity with granular real-time data on call volumes, wait times, hold times and wrap-up time. Maintain visibility into agent activity, including talk, hold, and wrap-up time and calls accepted, transferred and missed. Make an agent available or unavailable.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/214629687-zug-voice-dashboard-NEW-Analyzing-call-activity-with-the-Voice-Dashboard-Advanced-Voice-only-">Monitor call activity</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers agents admins add-on">
+<div class="col col-1">Call history</div>
+<div class="col col-2">View and analyze historical call data by agent, call status, wait time, hold time, and more, to support operational decision making.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20415321-Setting-up-Zendesk-Voice#topic_tmb_jrs_1k">Route calls</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers agents admins add-on">
+<div class="col col-1">Call data in Insights</div>
+<div class="col col-2">Track and measure the performance of your phone support and understand how it fits into your overall support operations with the powerful analytics power of Insights. </div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/205962478-Insights-Voice-reporting-recipe-">Using Insights</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers agents admins add-on">
+<div class="col col-1">Failover</div>
+<div class="col col-2">Failover automatically forwards incoming calls to an alternate number in the unlikely event of an outage, ensuring important calls always come through.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/214629667#topic_fkr_j2d_yt">Add a failover number</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row subtitle" id="ticket-management">
+<div class="inner">
+<div class="title">Customer Support</div>
+<div class="desc">Ticket Management</div>
+</div>
+</div>
+<p> </p>
+<div class="row even agents admins essential">
+<div class="col col-1">Default Views</div>
+<div class="col col-2">Views are a collection of tickets based on ticket status, assignee, group, or any other ticket conditions. Use views to help manage ticket workflow and organize tickets. Zendesk Support comes with pre-configured views that we recommend as best practices.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20103667-Using-views-to-manage-ticket-workflow">Use views</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd agents essential">
+<div class="col col-1">Macros</div>
+<div class="col col-2">Macros allow agents to quickly respond to common requests with a standard reply. In addition, macros can generate an action, like changing the status of the ticket. Zendesk Support comes with pre-configured macros we recommend as best practices. You can add more, modify, or turn them off.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check "></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check "></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<p> </p>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20011363-Using-macros-to-update-and-add-comments-to-tickets">Add macros</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even agents essential">
+<div class="col col-1">Rich text formatting</div>
+<div class="col col-2">Add rich text to your tickets responses such as headings, bullet lists, and other useful text formatting. Attach photos easily and in-line.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check "></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203661586-Enabling-Markdown">Enable rich formatting</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd agents admins team">
+<div class="col col-1">Custom ticket fields</div>
+<div class="col col-2">Custom ticket fields help gather all the information needed around a support request. These fields can be made visible to agents and/or your customers and can appear on tickets in Zendesk Support and the support request form.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20611326-Adding-and-using-custom-ticket-fields">Customize ticket fields</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins agents essential">
+<div class="col col-1">View original email</div>
+<div class="col col-2">For any ticket, view the original email sent by the customerincluding source code and HTML. Access to the original email expires 30 days after the email is received in Zendesk Support.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/22945927-Viewing-the-original-email-including-full-HTML">View original emails</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers agents essential">
+<div class="col col-1">Attachments</div>
+<div class="col col-2">Agents and customers can attach files to tickets. You can even drag and drop files into your Zendesk Support ticket response. There&#8217;s a 1MB limit for accounts on the Essential Plan, 7MB for Team Plan, 20MB for Professional and Enterprise Plans.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/21222511-Managing-your-tickets">Add attachments</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even agents team">
+<div class="col col-1">On-hold ticket status</div>
+<div class="col col-2">When a ticket requires input and resolution from a third party, set the ticket status as on-hold, so you can differentiate response times of your team versus the third party.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check "></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/22340998">Enable on-hold status</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd agents professional">
+<div class="col col-1">Dynamic Content</div>
+<div class="col col-2">Dynamic content is essentially multi-language placeholders that dynamically insert ticket content based on the customer&#8217;s preferred language. Agents can use dynamic content to easily provide localized support interactions. Dynamic content is supported in automations, macros, triggers, and other system-generated messages.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20720458">Use Dynamic Content</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers agents admins enterprise">
+<div class="col col-1">Ticket forms</div>
+<div class="col col-2">With ticket forms, you can create multiple support request forms that show a unique set of ticket fields. Ticket forms help ask the right questions and gather all the important information needed up-front. It can be made visible to agents and/or your customers.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Enterprise</div>
+<div class="col col-5"><a href="//support.zendesk.com/hc/en-us/articles/203661616-Creating-ticket-forms-to-support-multiple-request-types-Enterprise-">Create ticket forms </a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers agents admins enterprise">
+<div class="col col-1">Multibrand for 5 brands</div>
+<div class="col col-2">Support up to 5 brands, products, service tiers, or regions with unique Help Centers, support channels, and business rules. Data and activity are centralized within a single account, making it easy to manage.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Enterprise</div>
+<div class="col col-5"><a href="//support.zendesk.com/hc/en-us/articles/204108983">Set up your brands </a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers agents admins add-on">
+<div class="col col-1">Unlimited Multibrand</div>
+<div class="col col-2">Support unlimited brands, products, service tiers, or regions with unique Help Centers, support channels, and business rules. Data and activity are centralized within a single account, making it easy to manage.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="//support.zendesk.com/hc/en-us/articles/204108983">Set up your brands </a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row subtitle" id="agent-productivity-tools">
+<div class="inner">
+<div class="title">Customer Support</div>
+<div class="desc">Agent Productivity Tools</div>
+</div>
+</div>
+<p> </p>
+<div class="row odd agents essential">
+<div class="col col-1">Agent interface in 28 languages</div>
+<div class="col col-2">Zendesk Support can be set in your agent&#8217;s preferred language with a localized interface. Includes; German, French, Japanese, Portuguese, English, English (UK), Spanish, Italian, Dutch, Danish, Russian, Simplified Chinese, Traditional Chinese, Polish, and Korean. </div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20886698-Configuring-your-Zendesk-for-your-locale-and-language">Change your default language</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even agents essential">
+<div class="col col-1">Tickets requiring your attention</div>
+<div class="col col-2">This is a view on the agent dashboard that showcases the most relevant tickets when the agent first logs into Zendesk Support. The view consists of tickets that are new and open and assigned to you, unassigned tickets in your groups, and tickets not currently assigned to a group.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check "></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a>Log into Zendesk Support to check it out</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd agents essential">
+<div class="col col-1">Play button</div>
+<div class="col col-2">Use the Play button to open the first ticket in a ticket view that is not currently being viewed by another agent. The Play button eliminates cherry-picking of tickets and speeds up agent productivity.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a>Log into your Zendesk Support to check it out</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even agents admins enterprise">
+<div class="col col-1">Guided mode</div>
+<div class="col col-2">Guided Mode helps agents focus by preventing cherry-picking. Agents select from their assigned views, and are immediately guided to the next available ticket in the queue in the order set up by the admin. If an agent elects to skip a ticket, a reason can be entered for skipping, giving admins insight into training and development needs.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Enterprise</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/215598318-Setting-up-Guided-Mode-Enterprise-only-">Setting up Guided Mode</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd agents essential">
+<div class="col col-1">Multi-tab interface</div>
+<div class="col col-2">Zendesk Support is a multi-tab interface. Each tab can open a ticket, a customer profile, or knowledge base search results. Agents can open multiple tabs in one view and be able to multi-task by performing several actions.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check "></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a>Log into Zendesk Support to check it out</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even agents essential">
+<div class="col col-1">Instant search</div>
+<div class="col col-2">Click the search icon in the navigation bar to perform an instant search across tickets, users, organizations, or Help Center in a new tab.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20405093-Searching-the-data-in-your-Zendesk">Search in Zendesk</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd agents essential">
+<div class="col col-1">Keyboard shortcuts</div>
+<div class="col col-2">Zendesk Support comes pre-built with various keyboard shortcuts. Speed up productivity with the use of keyboard shortcuts to perform ticket actions and navigate through Zendesk Support.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check "></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/attachments/token/00bjvq5xsvrc2a0/?name=keyboard-shortcut-cheatsheet+%281%29.pdf">Use keyboard shortcuts</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even agents essential">
+<div class="col col-1">Single page app</div>
+<div class="col col-2">Zendesk Support is a single page app built on Ember.js to allow for a more interactive, real-time experience for you and your support team.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="http://techcrunch.com/2012/11/30/why-enterprise-apps-are-moving-to-single-page-design/">Why we chose Ember.js</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd agents essential">
+<div class="col col-1">Agent collision detection</div>
+<div class="col col-2">Agent collision detection displays any other agents who are viewing a ticket at the same time, and indicates if they are actively editing it. Zendesk Support updates the ticket fields in real-time to allow for collaboration between agents working on a ticket together.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/21222511-Managing-your-tickets#topic_fuv_ecx_qf">Avoid collisions</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even agents professional">
+<div class="col col-1">Agent alias</div>
+<div class="col col-2">Agents can use an alias that will be publicly displayed on all communications with your customer. This allows agents to create a persona and keep their real name private.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check "></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20293028">Add an agent alias</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd agents admins add-on">
+<div class="col col-1">Light agents</div>
+<div class="col col-2">Light agent is an unique role in Zendesk Support where the agent is only permitted to view tickets and add private comments. With this add-on you can have unlimited number of free light agents, so you can expand visibility and engagement throughout your entire company.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20430386-What-is-a-Light-Agent-Enterprise-">Expand Zendesk Support usage</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even agents enterprise">
+<div class="col col-1">Pathfinder app</div>
+<div class="col col-2">The Pathfinder app displays the customer’s path across any web page, as well as Help Center views and searches (including within the Web Widget) 30 minutes before and after a ticket is submitted. </div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Enterprise</div>
+<div class="col col-5"><a href="https://www.zendesk.com/apps/pathfinder/">Installing and using the Pathfinder app</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row subtitle" id="support-workflows">
+<div class="inner">
+<div class="title">Customer Support</div>
+<div class="desc">Support Workflows</div>
+</div>
+</div>
+<p> </p>
+<div class="row even admins essential">
+<div class="col col-1">Service Level Agreements (SLAs)</div>
+<div class="col col-2">Monitor your team’s performance by setting service level targets for specific tickets, based on conditions you set, to measure response, reply and resolution times. An SLA column can be added to any view so your team can easily see status and time to breach.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="//support.zendesk.com/hc/en-us/articles/204770038">Set up SLA policies</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins agents team">
+<div class="col col-1">Business rules: Triggers</div>
+<div class="col col-2">Triggers are time-saving tools that initiate a workflow based on specific changes or actions on a ticket. Your Zendesk comes with pre-configured triggers that we recommend as best practices. These are included in all plans. Starting at Team, you can modified, turn off, or add your own custom triggers using your own conditions and rules.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20011606-Streamlining-workflow-with-ticket-updates-and-triggers">Set up triggers</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins agents team">
+<div class="col col-1">Business rules: Automations</div>
+<div class="col col-2">Automations are time-saving tools that initiate a workflow based on time-based conditions. Your Zendesk comes with pre-configured automations that we recommend as best practices. These are included in all plans and can be modified or turned off. Starting at Team, you can add your own custom automations using your own conditions and rules.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20012032-Streamlining-workflow-with-time-based-events-and-automations">Set up automations</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd agents team">
+<div class="col col-1">Personal views</div>
+<div class="col col-2">Create personal ticket views for your own use. Your Zendesk Support comes with pre-configured views that we recommend as best practices. You can add more, modify, or turn them off.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20103667-Using-views-to-manage-ticket-workflow">Customize views</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even agents team">
+<div class="col col-1">Personal macros</div>
+<div class="col col-2">Create personal macros for your own use when responding to customers&#8217; tickets. Your Zendesk Support comes with pre-configured macros that we recommend as best practices. You can add more, modify, or turn them off.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check "></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20011363-Using-macros-to-update-tickets-and-chat-sessions">Personalize macros</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd agents team">
+<div class="col col-1">Group views</div>
+<div class="col col-2">Create a shared view available to agents within a specific group(s). Your Zendesk Support comes with pre-configured views that we recommend as best practices. You can add more, modify, or turn them off.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20103667-Using-views-to-manage-ticket-workflow">Manage views</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even agents team">
+<div class="col col-1">Group macros</div>
+<div class="col col-2">Create a shared macro available to agents within a specific group(s). Your Zendesk Support comes with pre-configured macros that we recommend as best practices. You can add more, modify, or turn them off.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check "></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20011363-Using-macros-to-update-tickets-and-chat-sessions">Share macros</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins professional">
+<div class="col col-1">Business hours</div>
+<div class="col col-2">Set business hours in Zendesk Support and apply to ticket workflows, triggers, automations, and SLA targets. For example, if you don&#8217;t provide 24/7 support to your customers, you can acknowledge your availability and give customers a sense of when they can expect a response to their requests.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/23245768-Setting-your-business-hours">Set business hours</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins enterprise">
+<div class="col col-1">Multiple Business hours</div>
+<div class="col col-2">Create multiple sets of business hours, called Schedules, in Zendesk Support and apply to ticket workflows, triggers, automations, and SLA targets. Incoming tickets can be assigned to a Schedule according to the customers location, the agent responding, or through custom business rules defined by an administrator.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Enterprise</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/206500667">Set business hours</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins professional">
+<div class="col col-1">Business rules filtering by usage</div>
+<div class="col col-2">Filter and sort business rules to gain an understanding of how your automations, macros, triggers, and views are used. Business rules can be sorted by date created, date updated, group, and category.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20300201-Filtering-business-rules">Filter business rules</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins agents professional">
+<div class="col col-1">Multiple Organizations</div>
+<div class="col col-2">Add a single user to multiple organizations, up to as many as 300. Helpful for contractors, supervisors, or employees who may belong to multiple business units, departments, or locations.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/204281156">Configure users&#8217; organizations</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins enterprise">
+<div class="col col-1">Business rules analysis</div>
+<div class="col col-2">Analyze the usage and effectiveness of your business rules, like triggers, automations, macros, and views. Business rules analysis allows you to identify areas for optimization.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Enterprise</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20307227-Analyzing-your-business-rules">Analyze business rules</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even agents essential">
+<div class="col col-1">Ticket sharing between Zendesk Support instances</div>
+<div class="col col-2">Tickets from Zendesk Support can be shared with other Zendesk Support accounts, and vice versa. Establish sharing agreements with any of your company&#8217;s partners and vendors who also use Zendesk Support, so you and your partners/vendors can collaborate on tickets.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check "></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20151333-Sharing-tickets-with-other-Zendesk-accounts">Share tickets</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins agents enterprise">
+<div class="col col-1">Automated ticket sharing</div>
+<div class="col col-2">Tickets from your Zendesk Support can be shared with other Zendesk Support accounts automatically, and vice versa. Establish automated sharing agreements with any of your company&#8217;s partners and vendors who also use Zendesk Support, so you and your partners/vendors can collaborate on tickets.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Enterprise</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203661466-Sharing-tickets-with-other-Zendesk-accounts">Set up ticket sharing</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row subtitle" id="knowledge-base">
+<div class="inner">
+<div class="title">Customer Self-Service</div>
+<div class="desc">Knowledge Base</div>
+</div>
+</div>
+<p> </p>
+<div class="row odd customers essential">
+<div class="col col-1">Knowledge base</div>
+<div class="col col-2">In Help Center, create a resource of helpful articles that answer customers&#8217; most popular questions. Sections within the knowledge base can be restricted to certain groups of customers by specifying an organization or tag.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/23394096-Contributor-guide-to-the-Help-Center">Build a knowledge base</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers essential">
+<div class="col col-1">Help Center category and section</div>
+<div class="col col-2">Help Center is organized in the following tree structure: Home &gt; Categories &gt; Sections &gt; Articles. Each article must be a child of a section, and each section must be child of a category. You cannot have orphan articles or sections.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check "></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/23746531#topic_kdk_srm_4k">Organize Help Center</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers essential">
+<div class="col col-1">Promoted articles</div>
+<div class="col col-2">Highlight articles that you want to be more prominent in Help Center. Promoting an article moves it to the first position of an article list. It also highlights the article in the list with a star to draw attention to it.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/23394096-Contributor-guide-to-the-Help-Center#topic_u2f_gq4_kk">Promote articles</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins essential">
+<div class="col col-1">Article overview</div>
+<div class="col col-2">View all of your published and unpublished knowledge base articles in one central location. Use search to easily find content and apply filters to refine the results further.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/216207658">View knowledge base articles</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins professional">
+<div class="col col-1">Article lists</div>
+<div class="col col-2">Create your own lists of articles based on searches and filters that you apply. Refer back to these article lists to manage and keep your content up-to-date.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/216207658#topic_rrl_3cs_55">Create article lists</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even agents professional">
+<div class="col col-1">Internal knowledge base</div>
+<div class="col col-2">In addition to restricting certain sections in Help Center to specific groups of customers, create an <a href="https://www.zendesk.com/help-center/knowledge-base-software/internal-knowledge-base/">internal knowledge base</a> for your agents for them to reference information, documentation, and processes.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check "></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/23394096-Contributor-guide-to-the-Help-Center#topic_fyv_bsm_kk">Restrict your knowledge base</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins professional">
+<div class="col col-1">Article labels</div>
+<div class="col col-2">Add labels to your Help Center articles to help boost the article&#8217;s relevance when a specific keyword or phrase is searched. You can also use the API to retrieve articles by their label.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203664366-Contributor-guide-to-the-Help-Center-knowledge-base#topic_bhg_rrg_m4">Labeling articles</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even agents Essential">
+<div class="col col-1">Instant search for help center</div>
+<div class="col col-2">Instant Search for Help Center fills in the blanks as customers search for content, providing them with article suggestions and helping them search faster.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check "></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/218467707-Help-Center-Instant-Search-is-Available-for-All-Customers">Instant search in Help Center</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers essential">
+<div class="col col-1">Web Widget: Contextual content</div>
+<div class="col col-2">Contextual Help displays suggested Help Center articles to customers in the Web Widget before they even search. Using keywords in the webpage’s URL, Contextual Help automatically infers what a customer might be looking for and offers the top three most likely self-service suggestion.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check "></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/219063308-Introducing-Contextual-Help-for-the-Web-Widget">Contextual help in Web Widget</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admin customers essential">
+<div class="col col-1">Web Widget: Restricted help center content</div>
+<div class="col col-2">With end-user authentication in the Web Widget, you can now embed content from a restricted Help Center (one that requires users to sign in for access)</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/221100847-Announcing-restricted-Help-Center-access-via-the-Web-Widget">Configure restricted content</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row subtitle" id="community">
+<div class="inner">
+<div class="title">Customer Self-Service</div>
+<div class="desc">Community</div>
+</div>
+</div>
+<p> </p>
+<div class="row odd customers professional">
+<div class="col col-1">Community</div>
+<div class="col col-2">Build brand loyalty, crowdsource support and gain feedback with a customizable customer community, built right into your Zendesk Help Center. Create topics under which users can add posts and comment on posts.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/24279711-Managing-community-content-in-the-Help-Center">Create your community</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers professional">
+<div class="col col-1">Community customization</div>
+<div class="col col-2">Easily customize your Zendesk Community to reflect your company’s brand. Change the look and feel of the Help Center using simple design tools such as color pickers and font choosers or take full control with powerful customization tools (Curlybars, based on Handlebars, a popular template language).</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203664326-Customizing-the-Help-Center#topic_wtp_zlv_n3">Customize your Community</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers professional">
+<div class="col col-1">Similar post suggestion</div>
+<div class="col col-2">As users create a new post, suggestions will reveal posts with similar titles to prevent duplicate posts.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203664386-Help-Center-guide-for-agents-and-end-users#topic_d1b_y5c_lk">Create Community content</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers professional">
+<div class="col col-1">Rich content editor for posts and comments</div>
+<div class="col col-2">Add rich text to posts and comments, such as headings (posts only), bullet lists, and other useful text formatting, as well as attach photos easily and in-line.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203664386-Help-Center-guide-for-agents-and-end-users#topic_d1b_y5c_lk">Create Community content</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers admins professional">
+<div class="col col-1">Sort posts &#038; comments</div>
+<div class="col col-2">Sorting tools make it easy to navigate Community content. View posts by topic or view all posts. Sort posts by creation date, recent activity, number of votes or number of comments; filter posts by status (Planned, Not planned, Completed, Answered); and, sort comments by date or number of votes.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203664386-Help-Center-guide-for-agents-and-end-users#topic_kdk_srm_4k">Find information in the Community</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers professional">
+<div class="col col-1">Follow posts &#038; comments</div>
+<div class="col col-2">Follow new posts or new posts &#038; comments to receive email notifications when updates are made, so you can stay engaged with a conversation. </div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check "></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203664386-Help-Center-guide-for-agents-and-end-users#topic_d1b_y5c_lk">Participate in the Community</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers admins professional">
+<div class="col col-1">Vote on posts and comments</div>
+<div class="col col-2">Vote on posts or comments. Users can sort based on number of votes.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203664386-Help-Center-guide-for-agents-and-end-users#topic_kdk_srm_4k">Participate in the Community</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers admins professional">
+<div class="col col-1">Set status on a post</div>
+<div class="col col-2">Set a status on a post (planned, not planned, completed or answered) to communicate clearly where a feature request or post is in a life cycle.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203664406-Managing-community-content-in-the-Help-Center-Professional-and-Enterprise-">Manage Community content</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers admins professional">
+<div class="col col-1">Feature or pin a post</div>
+<div class="col col-2">Feature posts in a section placed anywhere in your theme to highlight certain posts. Or, pin posts to the top of a section so it will remain at the top, regardless of sorting.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203664406-Managing-community-content-in-the-Help-Center-Professional-and-Enterprise-">Manage Community content</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers admins professional">
+<div class="col col-1">Close comments on posts</div>
+<div class="col col-2">Disable commenting on individual posts as needed.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203664406-Managing-community-content-in-the-Help-Center-Professional-and-Enterprise-">Manage Community content</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers admins professional">
+<div class="col col-1">Create tickets from posts or comments</div>
+<div class="col col-2">Create tickets from posts or comments to continue conversations one-on-one with customers.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203664406-Managing-community-content-in-the-Help-Center-Professional-and-Enterprise-">Manage Community content</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers admins professional">
+<div class="col col-1">Edit posts and comments</div>
+<div class="col col-2">Edit posts and comments to ensure accuracy.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203664406-Managing-community-content-in-the-Help-Center-Professional-and-Enterprise-">Manage Community content</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers admins professional">
+<div class="col col-1">Spam filter</div>
+<div class="col col-2">Mark posts or comments as spam and enable spam filter to prevent publication of end-user content suspected as spam.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203664406-Managing-community-content-in-the-Help-Center-Professional-and-Enterprise-">Manage Community content</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers admins professional">
+<div class="col col-1">Moderate content</div>
+<div class="col col-2">Enable content moderation to approve all end-user contributed content before it&#8217;s published.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203664406-Managing-community-content-in-the-Help-Center-Professional-and-Enterprise-">Manage Community content</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers admins professional">
+<div class="col col-1">Restrict access to Community content</div>
+<div class="col col-2">Prevent some users from viewing the content of certain topics in the community. For example, configure a topic so that only users who have signed in can view it.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203664406-Managing-community-content-in-the-Help-Center-Professional-and-Enterprise-">Manage Community content</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row subtitle" id="customer-portal">
+<div class="inner">
+<div class="title">Customer Self-Service</div>
+<div class="desc">Customer Portal</div>
+</div>
+</div>
+<p> </p>
+<div class="row odd customers team">
+<div class="col col-1">My activities</div>
+<div class="col col-2">Your customers can log into a dedicated customer portal to access their ticket history and activity, submit and track tickets, and view a list of subscribed community topics and questions.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/23746531-Help-Center-guide-for-agents-and-end-users#topic_hm3_y5c_lk">Manage support requests</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers team">
+<div class="col col-1">Follow a question, article, or topic</div>
+<div class="col col-2">Any logged-in user can follow community topics, questions, or knowledge base articles. They will receive alerts on any update made to that topic, question, or article, so they can stay up-to-date on conversations of interest.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check "></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/23746531-Help-Center-guide-for-agents-and-end-users#topic_ysq_y5c_lk">Manage subscriptions</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers team">
+<div class="col col-1">Add and update CC&#8217;s</div>
+<div class="col col-2">Signed in end-users can now add CC’s to requests they submit via the Help Center ticket form as well as edit existing CC&#8217;d users on a current ticket submission.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check "></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/215587317">Enable end-user CC</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row subtitle" id="content-management-tools">
+<div class="inner">
+<div class="title">Customer Self-Service</div>
+<div class="desc">Content Management Tools</div>
+</div>
+</div>
+<p> </p>
+<div class="row even admins essential">
+<div class="col col-1">Rich text formatting</div>
+<div class="col col-2">Format your articles. Bold, italicize, underline, or apply other styles to the text. Insert video, images, or tables to add visual elements.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/23394096-Contributor-guide-to-the-Help-Center#topic_ovr_4g4_kk">Format articles</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins essential">
+<div class="col col-1">Drag and drop content arrangement</div>
+<div class="col col-2">Move articles from section to section on the individual article pages, or re-arrange articles, sections, and categories with a simple drag and drop on the Arrange Content page.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/23394096-Contributor-guide-to-the-Help-Center#topic_zlc_5l4_kk">Arrange content</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers essential">
+<div class="col col-1">Integrated search</div>
+<div class="col col-2">Search the knowledge base and community at once. One search surfaces both knowledge base articles and community questions.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check "></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a>Log into Zendesk to check it out</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins essential">
+<div class="col col-1">Draft articles</div>
+<div class="col col-2">Add draft articles in Help Center. The articles are saved but not published. Publish a draft article or unpublish a live article with a tick of a checkbox on the article page.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/23394096-Contributor-guide-to-the-Help-Center#topic_ump_1sm_kk">Draft articles</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers admins professional">
+<div class="col col-1">Multilingual content management</div>
+<div class="col col-2">Enable multiple languages in your Help Center and surface only articles in the customer&#8217;s preferred language. Add localized content and manage all your multilingual content in one place.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/22645797-Localizing-the-Help-Center">Localize Help Center</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins professional">
+<div class="col col-1">Dynamic Content</div>
+<div class="col col-2">Dynamic Content is essentially multi-language placeholders that dynamically insert ticket content based on the customer&#8217;s preferred language. Dynamic Content is supported in Help Center.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/22645797-Localizing-the-Help-Center#topic_wnw_fbg_yj">Use Dynamic Content</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row subtitle" id="branding-and-customizations">
+<div class="inner">
+<div class="title">Customer Self-Service</div>
+<div class="desc">Branding and Customizations</div>
+</div>
+</div>
+<p> </p>
+<div class="row even admins essential">
+<div class="col col-1">Localized interface</div>
+<div class="col col-2">Help Center&#8217;s admin interface can be set in your preferred language with a localized interface in German, French, Japanese, Portuguese, English, English (UK), Spanish, Italian, Dutch, Danish, Russian, Simplified Chinese, Traditional Chinese, and Korean.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20886698-Configuring-your-Zendesk-for-your-locale-and-language#topic_t32_r4j_gl">Change default language</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers admins essential" style="height: 264px;">
+<div class="col col-1" style="height: 218px;">Support for 40+ languages</div>
+<div class="col col-2" style="height: 218px;">Specify the languages you want to support in your Help Center, and set a different name for the Help Center for each of your supported languages. On Essential and Team plans, Help Center supports one language. On Professional and Enterprise plans, you can select multiple languages to support. Zendesk supports the following languages: English, English (Canada), English (GB), French, French (Canada), Spanish, Japanese, Portuguese (Brazil), German, Latin American Spanish, Italian, Dutch, Russian, Trad. Chinese, Simpl. Chinese, Korean, Danish, Norwegian, Turkish, Swedish, Arabic, Hebrew, Polish, Bosnian, Bulgarian, Catalan, Croatian, Czech, Estonian, Finnish, Georgian, Greek, Hungarian, Icelandic, Indonesian, Latvian, Lithuanian, Filipino, Portuguese (Portugal), Romanian, Serbian, Slovakian, Slovenian, Thai, Ukrainian, Vietnamese, Czech, Persian.</div>
+<div class="col col-3" style="height: 238px;">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4" style="height: 218px;">Essential</div>
+<div class="col col-5" style="height: 218px;"><a href="https://support.zendesk.com/entries/22645797-Localizing-the-Help-Center#topic_esz_slg_p3">Add languages</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins essential">
+<div class="col col-1">Customization panel</div>
+<div class="col col-2">Built into Help Center is a customization panel where you can change your Help Center theme, colors, fonts, logo, and name.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/22618341-Customizing-the-Help-Center#topic_wtp_zlv_n3">Customize Help Center</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins essential">
+<div class="col col-1">Real-time preview</div>
+<div class="col col-2">See the customizations you make in real-time without affecting what your customers are seeing in your live Help Center. You can preview by role: anonymous, logged in customer, agent, or manager.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/22618341-Customizing-the-Help-Center">Preview Help Center</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins essential">
+<div class="col col-1">Themes</div>
+<div class="col col-2">Select a theme to quickly change the layout of your Help Center. Themes are design layouts built on self-service best practices. You can select from several pre-defined themes and further customize the theme.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/22618341-Customizing-the-Help-Center#topic_mfk_gfw_n3">Change themes</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins team">
+<div class="col col-1">Branding for mobile Help Center</div>
+<div class="col col-2">After enabling the mobile version of Help Center, customize the logo, favicon, and colors to match your company&#8217;s brand.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/22618341-Customizing-the-Help-Center#topic_wtp_zlv_n3">Brand mobile Help Center</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins team">
+<div class="col col-1">Built-in HTML editor</div>
+<div class="col col-2">Help Center comes with a built-in code editor so you can customize Help Center with HTML, CSS, or JavaScript. Select a template to access the page code.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/22618341-Customizing-the-Help-Center#topic_r5r_xlw_n3">Edit Help Center code</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins team">
+<div class="col col-1">Templates</div>
+<div class="col col-2">Work with the page code used to build the Help Center. The code is contained in editable templates that define the layout of each page type. Help Center templates include home page, category page, or article page, as well as the global header and footer.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/22618341-Customizing-the-Help-Center#topic_r5r_xlw_n3">Edit templates</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers agents essential">
+<div class="col col-1">Components</div>
+<div class="col col-2">Components are a set of code that enables a functionality to occur. Insert components into the page code on any template to perform advanced customizations to Help Center. No code experience needed.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check "></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/23491886">Use components</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins team">
+<div class="col col-1">Host mapping</div>
+<div class="col col-2">Host mapping, also known as domain mapping, enables you to use your own subdomain, such as help.mycompany.com. This allows you to route users from a company page to your Zendesk automatically. To display your own domain such as help.mycompany.com on your Zendesk site, you will need SSL (Professional plan and up).</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/22902881-Changing-the-address-of-your-support-website-on-Zendesk-host-mapping-">Set up host mapping</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers admins enterprise">
+<div class="col col-1">Multiple (up to 5) Branded Help Centers</div>
+<div class="col col-2">Manage up to 5 separate Help Centers–each with a unique destination, content, and branded design–from a single Zendesk account.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Enterprise</div>
+<div class="col col-5"><a href="//support.zendesk.com/hc/en-us/articles/204108983">Set up your brands </a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins add-on">
+<div class="col col-1">Unlimited Branded Help Centers</div>
+<div class="col col-2">Manage as many Help Centers–each with a unique destination, content, and branded design–as you need, from a single Zendesk account.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="//support.zendesk.com/hc/en-us/articles/204108983">Set up your brands </a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even customers admins essential">
+<div class="col col-1">Copenhagen responsive theme for Help Center</div>
+<div class="col col-2">The Copenhagen Responsive theme is a new theme for Help Center built on best practices and by default optimized for beautiful experiences across devices including Mobile devices, tablets and desktops
+</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/220672108-Copenhagen-a-new-responsive-theme-for-Help-Center">Brand mobile Help Center</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row subtitle" id="customer-context">
+<div class="inner">
+<div class="title">Customer Engagement</div>
+<div class="desc">Customer Context</div>
+</div>
+</div>
+<p> </p>
+<div class="row odd agents essential">
+<div class="col col-1">Customer profiles</div>
+<div class="col col-2">View information about your customers, from basic contact info, language preferences, to any customer data captured in custom user fields.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="#">Log into your Zendesk to check it out</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even agents team">
+<div class="col col-1">User Data app</div>
+<div class="col col-2">The Zendesk User Data app gives you a view of customer information: user and organization details like tags, ticket activity, and contact info right next to a ticket.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check "></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="www.zendesk.com/apps/user-data-app">Install the app</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd agents admins team">
+<div class="col col-1">Custom user fields</div>
+<div class="col col-2">Custom user fields capture information about individual customers. In addition, custom user fields can be used in triggers and automations, so dedicated workflows can be set based on customer data.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/24740352-Adding-custom-fields-to-users">Add custom user fields</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even agents admins team">
+<div class="col col-1">Custom organization fields</div>
+<div class="col col-2">Custom organization fields capture information about a group of customers. In addition, custom organization fields can be used in triggers and automations, so dedicated workflows can be set based on customer data.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/24742666">Add custom org fields</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd agents admins team">
+<div class="col col-1">Zendesk for Salesforce CRM</div>
+<div class="col col-2">Bring together data, like customer information and support activity, between Salesforce and Zendesk. View Zendesk Support tickets in Salesforce, bring Salesforce account and contact info into Zendesk Support, and enable real-time data sync. Available to any Salesforce organization on Group, Professional, Enterprise, Unlimited, or Developer editions.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/22077038-Zendesk-for-Salesforce-v3-Getting-Started">Integrate with Salesforce</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even agents admins add-on">
+<div class="col col-1">Customer lists</div>
+<div class="col col-2">Customer lists are a group of customers filtered by the custom user/org fields and tags you set. Export a list to a CSV or send an email or survey with MailChimp or SurveyMonkey to a targeted customer list.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/28212333-Creating-and-using-customer-lists">Create customer lists</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers agents admins professional">
+<div class="col col-1">Customer satisfaction ratings</div>
+<div class="col col-2">Your customers can rate how satisfied they are with the support they received. By default, your customers will receive an email 24 hours after the ticket has been set to solved that asks one question with two possible answers: Good I&#8217;m satisfied or Bad I&#8217;m unsatisfied.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20091857-Using-customer-satisfaction-rating">Rate your support</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even agents admins enterprise">
+<div class="col col-1">Satisfaction prediction</div>
+<div class="col col-2">Predict how likely your customers are going to be satisfied. Powered by a machine learning model, your team can enter conversations with more context. The prediction is shown on a support ticket and can be incorporated into your ticket views, workflows and reports.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Enterprise</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/217592937">Predict customer satisfaction</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins team">
+<div class="col col-1">Net Promoter Score℠ survey</div>
+<div class="col col-2">From Zendesk Support, send an NPS® survey to measure customer loyalty and gather customer feedback. Understand why some customers love your company and why others will not recommend your products and services to others. As customers&#8217; responses flow in, their latest NPS rating and comment will be captured in their user profile.</p>
+<p><font size="1">Net Promoter, NPS, and the NPS-related emoticons are registered trademarks, and Net Promoter Score and Net Promoter System are service marks, of Bain &#038; Company, Inc., Satmetrix Systems, Inc. and Fred Reichheld.</font></br></div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203791506">Measure customer loyalty</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins professional">
+<div class="col col-1">Satisfaction reasons</div>
+<div class="col col-2">Understand the reasons behind your negative CSAT ratings by providing your customers with the option to share why they were unsatisfied. This can help you distinguish between feedback about the customer experience vs. feedback about other things.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4"> Professional </div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/222591768">Understand satisfaction ratings</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row subtitle" id="reporting-and-analytics">
+<div class="inner">
+<div class="title">Reporting and Analytics</div>
+<div class="desc"></div>
+</div>
+</div>
+<p> </p>
+<div class="row odd admins essential">
+<div class="col col-1">Zendesk Benchmark</div>
+<div class="col col-2">Compare yourself against your peers on key benchmark metrics like customer satisfaction, first response time, and ticket volume. For the latest report, visit www.zendesk.com/benchmark.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/21999767-Using-the-Reporting-dashboard">Benchmark your support</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins essential">
+<div class="col col-1">Export ticket view to CSV</div>
+<div class="col col-2">Ticket views can serve as a way to report on the types of support requests you&#8217;re receiving. Export a ticket view to a CSV file, containing an entry for each ticket and all its associated ticket information in the view. Because of the processing involved in generating a CSV file, we limit export requests to one view every ten minutes.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20103667-Using-views-to-manage-ticket-workflow#topic_5zk_ddp_p3">Export ticket views</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins team">
+<div class="col col-1">Overview dashboards</div>
+<div class="col col-2">Get a quick view summary of your key ticket metrics by channel, benchmark, and first reply; as well as your top articles, searches, and agents.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/21999767-Using-the-Reporting-dashboard">Measure your support</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins team">
+<div class="col col-1">Support performance dashboards</div>
+<div class="col col-2">Measure your performance by having visibility into ticket volume, agent performance, and other key support metrics. The data in the reporting dashboard is updated on an hourly basis. It does not contain data about deleted tickets.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/21999767-Using-the-Reporting-dashboard">Measure your support</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins team">
+<div class="col col-1">Google Analytics for Help Center</div>
+<div class="col col-2">Drill into customer self-service behaviors with Google Analytics for Help Center. Google Analytics is a free Web analytics tool. Set up custom event tracking around specific customer activity, like the actions a visitor takes prior to submitting a ticket.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/39275063">Measure self-service</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins professional">
+<div class="col col-1">Help Center dashboards</div>
+<div class="col col-2">Get an instant snapshot of your Help Center activity with three pre-built dashboards that capture trends around knowledge base activity, community engagement, and search behaviors. Use these insights to optimize the customer self-service experience.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/98890193">See the dashboards</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins professional">
+<div class="col col-1">Time tracking</div>
+<div class="col col-2">Automatically track the time spent on each of your Zendesk Support tickets. The Time Tracking app captures the time your agents spend on every ticket, so managing your team’s performance and overall support operations is easier.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="/apps/time-tracking/">Learn about time tracking</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins professional">
+<div class="col col-1">Insights (custom reports &amp; dashboards)</div>
+<div class="col col-2">Interact, filter, and drill into over 50 best practice reports to measure operational efficiency, agent performance, and customer experience. Build custom dashboards to slice and dice data in meaningful ways to better understand your customers and improve your team&#8217;s workflow. Zendesk data is synced daily at a time you set.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/50037596-Insights-resources">Learn about Insights</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins enterprise">
+<div class="col col-1">Share Insights reports</div>
+<div class="col col-2">Share Insights reports with others ad hoc, or schedule reports to be sent regularly via email. Keep your entire organization in-tune with customer interactions, feedback, and support performance.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/22320208#topic_qtk_4vz_n4">Share insights</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins professional">
+<div class="col col-1">Report on custom fields</div>
+<div class="col col-2">Report on up to 60 fields on the Professional plan and up to 200 fields on the Enterprise plan.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/50037596-Insights-resources">Report on your data</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins enterprise">
+<div class="col col-1">Hourly data sync with Insights</div>
+<div class="col col-2">Zendesk data synched with Insights hourly on the Enterprise Plan. Each sync begins one hour after the current sync ends.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Enterprise</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/22291241#topic_zgq_2mc_23">Sync your data</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins professional">
+<div class="col col-1">SLA Reporting</div>
+<div class="col col-2"> Gain actionable insights into the enforcement of your SLA policies through a best practice dashboard as well as 11 metrics and 6 attributes specific to SLA added in Zendesk Insights. </div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/208018217">See what&#8217;s possible</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row subtitle" id="security-and-access">
+<div class="inner">
+<div class="title">Security and Access</div>
+<div class="desc"></div>
+</div>
+</div>
+<p> </p>
+<div class="row odd admins team">
+<div class="col col-1">SSO with JWT</div>
+<div class="col col-2">Single sign-on (SSO) allows you to authenticate users in your systems. Once authenticated, users can access Zendesk without needing to enter separate login credentials. Zendesk only grants access to the users that have been authenticated by you. Zendesk SSO relies on a technology called JSON Web Token (JWT) for securing the exchange of user authentication data.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/23675367-Setting-up-single-sign-on-with-JWT-JSON-Web-Token-">Set up SSO</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins essential">
+<div class="col col-1">SSO with Twitter, Facebook, and Google</div>
+<div class="col col-2">Zendesk offers various SSO options. Provide single sign-on integration with your existing identity via Twitter, Facebook, or Google accounts.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/23691733-Single-sign-on-SSO-options-in-Zendesk">Use SSO options</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins essential">
+<div class="col col-1">Configurable password policy</div>
+<div class="col col-2">Zendesk provides the following levels of password security: low, medium, and high. Set one password security level for end-users, and a different one for admins and agents. Only admins can change the password security level. On the Professional and Enterprise Plan, you can specify your own custom password security level.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/23134742-Setting-the-password-security-level-for-your-Zendesk">Secure your Zendesk</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins essential">
+<div class="col col-1">Two-Factor Authentication</div>
+<div class="col col-2">2-factor authentication provides another layer of security to your Zendesk account, making it more difficult for somebody else to sign in as you. Admins and agents who turn on this setting will need to provide a passcode, sent to their mobile device, in addition to a password when signing in.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/203824246">Secure your login</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins essential">
+<div class="col col-1">ISO27001:2013 Certified</div>
+<div class="col col-2">Zendesk is ISO 27001:2013 certified. The ISO 27001 certification applies to the management of development, operations, maintenance, and delivery of the SaaS products provided to customers by Zendesk, including Zendesk Chat. Zendesk&#8217;s certification doesn&#8217;t extend to cover any third-party services.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/205419737-Security-Certification-ISO-27001-2013">Learn more</a></div>
+<div class="clearfix"></div>
+</div>
+<p> <br/>
+ 
+ </p>
+<div class="row odd admins essential">
+<div class="col col-1">Agent device management</div>
+<div class="col col-2">Zendesk tracks the devices used to sign in to your account. Check the list on a regular basis for any suspicious devices. Admins will receive an email notification when a new device is added.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/23554507-Checking-the-devices-used-to-access-your-account">Track devices</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins essential">
+<div class="col col-1">SSL encryption</div>
+<div class="col col-2">SSL (Secure Socket Layer) is an encryption protocol that ensures secure communications with your Zendesk web portal. SSL is enabled by default. The secure connection is indicated in the customer&#8217;s browser by https (for HTTP Secure) in the URL and by a padlock icon in the address bar.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/23087048-Providing-secure-communications-with-SSL">Secure your communication</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins professional">
+<div class="col col-1">SSL certificate hosting</div>
+<div class="col col-2">If you change the subdomain of your Zendesk from zendesk.com to your own subdomain, Zendesk&#8217;s SSL certificate no longer applies. Hosted SSL is an alternative solution. The general setup workflow consists of obtaining a SSL certificate from a certificate authority and then sending it to us to install on our servers.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/22902881#topic_slw_pmy_v3">Use hosted SSL</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins essential">
+<div class="col col-1">Digitally signed emails (DKIM/DMARC)</div>
+<div class="col col-2">Supporting the DKIM and DMARC standards, digitally sign outbound emails from Zendesk to prove that an email actually came from somebody in your organization and not somebody pretending to be from your organization. Digitally signing outbound email is supported only if you have set up an external email domain for your Zendesk email.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/24513948-Digitally-signing-your-email">Digitally sign your emails</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins professional">
+<div class="col col-1">SSO with SAML support</div>
+<div class="col col-2">Zendesk supports Secure Assertion Markup Language (SAML), which allows you to provide single sign-on (SSO) for your Zendesk using enterprise identity providers such as Active Directory and LDAP.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/514714">Use SAML for SSO</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins enterprise">
+<div class="col col-1">Sandbox test environment</div>
+<div class="col col-2">Perform tests on your Zendesk in a trial environment, separate from your production instance. Use the sandbox to test, learn, and make mistakes before making your changes public.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Enterprise</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/22881993-Testing-changes-in-your-sandbox">Test in Sandbox</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins enterprise">
+<div class="col col-1">Network access restriction</div>
+<div class="col col-2">Only allow access to your Zendesk account from specified IP ranges. Choose to apply restriction to all users or only to the agent portal.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Enterprise</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20300421-Restricting-access-to-your-Zendesk-using-IP-restrictions-Enterprise-">Restrict access</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins enterprise">
+<div class="col col-1">Custom roles and permissions</div>
+<div class="col col-2">Specify granular permissions for agents, and control what they have access to in Zendesk. This allows you to define agent roles that suit your own organizational structure and workflow.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Enterprise</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20300342-Custom-agent-roles-Enterprise-">Customize agent roles</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins enterprise">
+<div class="col col-1">Audit logs</div>
+<div class="col col-2">View a detailed list of critical changes that have been made to your Zendesk account, user, app changes, business rules, tickets, and settings.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Enterprise</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/22438082-Viewing-the-Audit-log-for-changes-Enterprise-only-">View audit logs</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins enterprise">
+<div class="col col-1">Email compliance archive</div>
+<div class="col col-2">Send all Zendesk email notifications privately to an address of your choice, keeping a complete archive of communication.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Enterprise</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/20296386-Archiving-email-notifications-Enterprise-">Archive emails</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins enterprise">
+<div class="col col-1">PCI compliant field</div>
+<div class="col col-2">Disaster recovery with quoted targets for RPO and RTO.
+</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Enterprise</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/218032598-Adding-a-PCI-compliant-credit-card-field-Enterprise-">Add a PCI compliant field</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins add-on">
+<div class="col col-1">Data Center Location</div>
+<div class="col col-2">Specify a region or country where your account data must be stored. Select from US-only or EU-only. Some restrictions apply. </div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="https://support.zendesk.com/entries/26809787-Preparing-your-Move-to-the-Dublin-Data-Centre">Learn more</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins add-on">
+<div class="col col-1">Encryption-at-rest</div>
+<div class="col col-2">Encryption of all your Zendesk data-at-rest.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/210178838">Learn more</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even admins add-on">
+<div class="col col-1">Enhanced disaster recovery</div>
+<div class="col col-2">Disaster recovery with quoted targets for RPO and RTO.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/210178838">Learn more</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd admins add-on">
+<div class="col col-1">HIPAA Compliance</div>
+<div class="col col-2">Zendesk has successfully completed a HIPAA/HITECH assessment and can make its Business Associate Agreement (BAA) available for execution by subscribers.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Add-on</div>
+<div class="col col-5"><a href="https://support.zendesk.com/hc/en-us/articles/210178838">Learn more</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row subtitle" id="api-and-integrations">
+<div class="inner">
+<div class="title">API and Integrations</div>
+<div class="desc"></div>
+</div>
+</div>
+<p> </p>
+<div class="row odd admins essential">
+<div class="col col-1">REST, Email, JavaScript API</div>
+<div class="col col-2">Use the Zendesk API to automate and enhance their customer support with Zendesk. Essential allows for 10 requests per minute (RPM), Team 200 RPM, Professional 400 RPM and Enterprise 700 RPM. High Volume API users can purchase an add-on to increase their limit to 2500 RPM. Details at developer.zendesk.com.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="http://developer.zendesk.com/documentation/rest_api/introduction.html">Use the API</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even agents admins team">
+<div class="col col-1">Public apps &#038; integrations</div>
+<div class="col col-2">Zendesk has over 500+ public apps and integrations available in our marketplace. App Categories include Productivity &#038; Time-Tracking, IT &#038; Project Management, E-Commerce &#038; CRM, Telephony &#038; SMS, Knowledge &#038; Content, Zendesk Labs, Analytics &#038; Reporting, Chat &#038; Collaboration, Surveys &#038; Feedback, Email &#038; Social Media.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Team</div>
+<div class="col col-5"><a href="https://www.zendesk.com/apps/">See all apps</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd agents admins professional">
+<div class="col col-1">Private custom apps &#038; integrations</div>
+<div class="col col-2">Build your own Zendesk App or Channel integration, for exclusive use within your account, using our App and Channel Frameworks. Display or update external data, hide or show a field on a user or even build a custom workflow on tickets.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://developer.zendesk.com/apps">Documentation</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row even agents admins professional">
+<div class="col col-1">CTI Toolkit &#038; telephony apps</div>
+<div class="col col-2">Zendesk Talk &#8211; Partner Edition provides access to <a href="https://www.zendesk.com/apps/">Zendesk’s telephony apps</a> and CTI toolkit, allowing companies to integrate out-of-the-box or custom call center solutions with the Zendesk ticketing system for more productive agents, greater visibility into support operations and more consistent cross-channel support.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Professional</div>
+<div class="col col-5"><a href="https://www.zendesk.com/apps/">See CTI integrations</a></div>
+<div class="clearfix"></div>
+</div>
+<p> </p>
+<div class="row odd customers admins essential">
+<div class="col col-1">Mobile SDK</div>
+<div class="col col-2">Bring Zendesk functionalities, like ticket submission, knowledge base articles, live chat and more, into your iOS and Android apps. Visit https://support.zendesk.com/hc/en-us/articles/204256073 for more details.</div>
+<div class="col col-3">
+<ul>
+<li>
+<div class="check checked"></div>
+<div class="label">Customers</div>
+</li>
+<li>
+<div class="check"></div>
+<div class="label">Agents</div>
+</li>
+<li>
+<div class="check checked"></div>
+<div class="label">Admins</div>
+</li>
+</ul>
+</div>
+<div class="col col-4">Essential</div>
+<div class="col col-5"><a href="https://developer.zendesk.com/">Learn more</a></div>
+<div class="clearfix"></div>
+</div>
+</div>
+<p> </p>
+</article>
+</div>
+<div class="clearfix"></div>
+<footer class="clear">
+<div class="sitemap mega-footer">
+<div class="col-960">
+<nav class="primary-menu-list-wrap">
+<ul id="menu-footer-navigation" class="primary-menu-list">
+<li id="smartling-nav-footer-product" class="SL_swap menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children list-parent "><a href="/support/">Our Products</a>
+<div class="primary-menu-list-dropdown"><span class="pin"></span>
+<ul>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/support/">Support</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/help-center/">Help Center</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/chat/">Chat</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/talk/">Talk</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/message/">Message</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/inbox/">Inbox Team Email</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/explore/">Explore</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/connect/">Connect</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/apps/">Integrations &#038; Apps</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/embeddables/">Embeddables</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/zendesk-insights/">Insights &amp; Analytics</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/whats-new/">Product Updates</a></li>
+</ul>
+</div>
+</li>
+<li id="smartling-nav-footer-features" class="SL_swap menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children list-parent "><a href="/">Top Features</a>
+<div class="primary-menu-list-dropdown"><span class="pin"></span>
+<ul>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/help-desk-software/features/ticketing-system/">Ticketing System</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/help-center/knowledge-base-software/">Knowledge Base</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/help-center/community-software/">Community Forums</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/help-desk-software/">Help Desk Software</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children SL_hide"><a href="/internal-help-desk/it-help-desk-software/">IT Help Desk</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/product/zendesk-security/">Security</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/product/tech-specs/">Tech Specs</a></li>
+</ul>
+</div>
+</li>
+<li id="smartling-nav-footer-resources" class="SL_swap menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children list-parent "><a href="/resources/">Resources</a>
+<div class="primary-menu-list-dropdown"><span class="pin"></span>
+<ul>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="//support.zendesk.com/hc/en-us/">Product Support</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/demo/">Request a demo</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/resources/">Library</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children SL_norewrite"><a href="/blog/">Zendesk Blog</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/support/webinars/">Live webinars</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/customer-experience/training/#training">Training</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children SL_hide"><a href="http://developers.zendesk.com">API &#038; Developers</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/partners/">Services &#038; Partners</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children SL_hide"><a href="/lp/retail/">For Retailers</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="https://relate.zendesk.com/">Relate by Zendesk</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/why-zendesk/customers/">Customer Stories</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/customer-experience/">Services</a></li>
+</ul>
+</div>
+</li>
+<li id="smartling-nav-footer-company" class="SL_swap menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children list-parent "><a href="/about/">Company</a>
+<div class="primary-menu-list-dropdown"><span class="pin"></span>
+<ul>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/about/">About us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/company/press/">Press</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="http://investor.zendesk.com">Investors</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/jobs/">Careers</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="http://www.neighborfoundation.org/">Neighbor Foundation</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/support/contact/">Contact Us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/sitemap/">Sitemap</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="https://status.zendesk.com">System Status</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="https://help.zendesk.com/hc/en-us">Product Help</a></li>
+</ul>
+</div>
+</li>
+<li id="smartling-nav-footer-favorites" class="SL_swap menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children list-parent "><a href="/">Favorite Things</a>
+<div class="primary-menu-list-dropdown"><span class="pin"></span>
+<ul>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/startups/">Zendesk for Startups</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children SL_hide"><a href="http://relate.zendesk.com/articles/shit-support-agents-say/">Sh*t Agents Say</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children SL_hide"><a href="https://www.youtube.com/watch?v=wPtnoRqQa5U">Zoe Calls Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/benchmark-your-support/">Zendesk Benchmark</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/small-business/">Zendesk for Small Business</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/resources/gartner-magic-quadrant-crm/">Gartner CRM Magic Quadrant</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="https://relate.zendesk.com/education/interview-questions-hiring-great-customer-service-reps/">Hiring Great Support Teams</a></li>
+</ul>
+</div>
+</li>
+</ul>
+<div style="clear: both;"></div>
+</nav> 
+<div id="newsletter-form" class="newsletter-sub">
+<h3>Enter the Fold</h3>
+<p>Join the elite group of other people who have also signed up for our mailing list.</p>
+<form id="newsletter" class="form-gray" method="post" name="eloquaform">
+<label class="success"><span></span>Welcome to the club!</label>
+<ul>
+<li class="error">
+<div class="depth-wrap">
+<input name="owner[email]" id="owner[email]" type="text" placeholder="What&apos;s your email?" class="email">
+<a class="register"></a>
+</div>
+<label style="display: block; opacity: 1;"><span></span>Please use a valid email</label>
+</li>
+<li style="display:none">  
+<input type="hidden" name="elqFormName" id="elqFormName" value="WebsiteNewsletterSignup_new">
+</li>
+</ul>
+</form>
+<div class="l-island l-island-right social clear">
+<span itemscope itemtype="https://schema.org/Organization">
+<link itemprop="url" href="https://www.zendesk.com">
+<a itemprop="sameAs" href="//plus.google.com/+zendesk" class="ent-text ico-gplus" rel="publisher">&#59639;</a>
+<a itemprop="sameAs" href="//www.facebook.com/zendesk" class="ent-text ico-facebook">&#59636;</a>
+<a itemprop="sameAs" href="//www.twitter.com/zendesk" class="ent-text ico-twitter">&#59634;</a>
+<a itemprop="sameAs" href="//www.linkedin.com/company/zendesk" class="ent-text ico-linkedin">&#59645;</a>
+<a itemprop="sameAs" href="http://www.slideshare.net/zendesk" class="ent-text ico-slideshare"></a>
+<a itemprop="sameAs" href="//instagram.com/zendesk/" class="ent-text ico-instagram">&#59657;</a>
+</span>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="legal clear">
+<div class="col-960">
+<a href="//www.zendesk.com/company/customers-partners/#terms-of-use">Terms of Use</a>
+<a href="//www.zendesk.com/company/customers-partners/#privacy-policy">Privacy Policy</a>
+<a href="//www.zendesk.com/company/customers-partners/#cookie-policy">Cookie Policy</a>
+<a href="https://www.zendesk.com/legal/">&copy;Zendesk 2016</a>
+</div>
+</div>
+<div class="universe-search">
+<div class="universe-search-close ent-text"></div>
+<div class="col-960">
+<div class="universe-search-help"><span class="universe-search-help-count">0</span> results. <br/>How about another try?</div>
+<div class="universe-search-form">
+<span class="universe-search-icon ent-text"></span>
+<input type="text" name="search" class="universe-search-input" placeholder="Start typing to get your search on..." value=""/>
+</div>
+<div class="universe-search-results"></div>
+<div class="universe-search-pagination" style="display:none">
+<ol class="universe-search-pagination-list"> </ol>
+</div>
+</div>
+</div>
+<div class="search">
+<div class="col-960">
+<a href="javascript:;" class="search-launcher"><span class="ent-text icon"></span>Search Zendesk <span class="cursor"></span></a>
+</div>
+</div>
+<div class="clearfix"></div>
+</footer>
+ 
+<script src="//d2wy8f7a9ursnm.cloudfront.net/bugsnag-2.min.js" data-apikey="14b4da2b1698aa9ce8da80a183366f26"></script>
+<script type="text/javascript" src="//api.demandbase.com/api/v2/ip.js?key=cb334198e711721abab9b3d4c785e482544ca07f&var=dbase"></script>
+<script type="text/javascript" src="https://d1eipm3vz40hy0.cloudfront.net/js/plugins.min.9eed7a26.js"></script>
+<script type="text/javascript" src="https://d1eipm3vz40hy0.cloudfront.net/js/webutils.min.a4f9eb1c.js"></script>
+<script type="text/javascript" src="https://d1eipm3vz40hy0.cloudfront.net/js/global.min.04c36daa.js"></script>
+ 
+<script type="text/javascript">
+  webutils.styleHeader();
+  webutils.gauge();
+
+  var emeaCountryCodes = new Array('UK', 'GB', 'IM', 'GI', 'JE', 'GG', 'AT', 'BE', 'CY', 'EE', 'FI', 'FR', 'DE', 'EL', 'IE', 'IT', 'LV', 'LU', 'MT', 'NL', 'PT', 'SK', 'SI', 'ES', 'MC', 'VA', 'SM', 'ME', 'MC', 'LU', 'XK', 'KV', 'GR', 'AD')
+    , emeaDomainNames  = new Array('www.zendesk.de', 'www.zendesk.es', 'www.zendesk.fr', 'www.zendesk.it', 'www.zendesk.nl');
+
+  if((typeof dbase !== 'undefined' && $.inArray(dbase.registry_country_code, emeaCountryCodes) > -1) || $.inArray(window.location.hostname, emeaDomainNames) > -1) {
+    webutils.cookieNotice();
+  }
+
+  webutils.loadEloqua();
+</script>
+<div id="ouibounce-modal">
+<div class="dim-backg">
+<div class="center-modal">
+<div class="upper-row">
+<div class="x-close">X</div>
+</div>
+<div class="lower-row">
+<h2>Join us for a live product demo</h2>
+<h3>We'll walk you through the product family and answer any questions you have about Zendesk</h3>
+<a href="/demo/#demo-form" class="sched-demo">Schedule a demo</a>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="https://d1eipm3vz40hy0.cloudfront.net/js/ouibounce.min.f91b9be1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// Show Modal on Exit
+		ouibounce(document.getElementById('ouibounce-modal'), {
+      sensitivity: 40,
+      cookieExpire: 1,
+      sitewide: true,
+			callback: function() {
+				webutils.track('Marketing - Impression - Bounce Popup');
+			}
+		});
+
+		// Hide modal
+		$('.dim-backg').click(function(){
+			$('#ouibounce-modal').fadeOut();
+		});
+	});
+</script>
+ 
+<script type="text/javascript" src="https://d1eipm3vz40hy0.cloudfront.net/js/waypoints.min.js"></script>
+<script type="text/javascript" src="https://d1eipm3vz40hy0.cloudfront.net/js/modules/ent-sidebar-menu.min.c9054f7a.js"></script>
+ 
+<script>
+  $(document).ready(function(){
+
+    webutils.lockTopNavigation(); // lock nav in place
+
+    // init sidebar menu
+    zdSidebarMenu.init('Tech Specs');
+
+    // failsafe for making sure table does not go up past the title when the table is filtered
+    $('h1').waypoint(function(direction) {
+      if (direction == 'up') {
+        $('.row.head').removeClass('stuck');
+      }
+    }, { offset: 75 });
+
+    // stick and unstick table header to the top of window
+    $('.row.head').waypoint(function(direction) {
+      if (direction == 'down') {
+        //if ($(this).offset().top >= 260) {
+          $(this).addClass('stuck');
+          $('.row.subtitle:visible').first().addClass('stuck');
+        //}
+      } else {
+        //if ($(this).offset().top <= 260) {
+          $(this).removeClass('stuck');
+          $('.row.subtitle:visible').first().removeClass('stuck');
+        //}
+      }
+    }, { offset: 75 });
+
+    // stick and unstick table subtitles to top of window
+    $('.row.subtitle:visible').waypoint(function(direction) {
+      if (direction == 'down') {
+        if ($('.row.head').hasClass('stuck')) {
+          $(this).addClass('stuck');
+        }
+      } else {
+        $(this).removeClass('stuck');
+      }
+    }, { offset: 212 });
+
+    // append static menu to masthead for easy scrolling
+    $('.tour-menu-container').appendTo(".masthead-stuck-target");
+
+    // handle sidebar nav links -- soft scroll to destination
+    $('.child-menu a').click(function(event) {
+      event.preventDefault();
+      var dest = 0
+        , hash = $(this.hash);
+
+      // track clicking on sidebar nav element to ga
+      //_gaq.push(['_trackEvent', 'Tech Specs', 'Sidebar', hash.attr('id')]);
+      ga('send', 'event', 'Tech Specs', 'Sidebar', 'Sidebar', hash.attr('id'));
+
+      // calculate destination
+      if (hash.offset().top > $(document).height()-$(window).height()) {
+        dest = $(document).height()-$(window).height();
+      } else {
+        dest = hash.offset().top;
+      }
+
+      // take into account the static header
+      dest -= 136;
+
+      // go to destination
+      $('html,body').animate({scrollTop:dest}, 1000,'swing');
+
+    });
+
+    // handle filtering
+    $('.selector').click(function(event) {
+
+      // handle revealing / hiding the menu
+      if ($(this).hasClass('opened')) {
+        $(this).removeClass('opened');
+      } else {
+        $('.selector').removeClass('opened');
+        $(this).addClass('opened');
+      }
+
+      // handle links clicked within the menu
+      if ($(event.target).get(0).tagName == "A") {
+        var thisColToggle = $(event.target).data('show')
+          , text = $(event.target).text()
+          , otherColToggle = null
+          , otherColClass = null;
+
+        // get the toggle value of the other column
+        otherColClass = ($(this).hasClass('built-for')) ? 'starts-at' : 'built-for';
+        otherColToggle =  $(this).parents('.row').find('.selector.' + otherColClass + ' .selected').attr('data-selected');
+
+        // update the selected box
+        $(this).children('.selected').attr('data-selected', thisColToggle).text(text);
+
+        // default to show all
+        $('.row').show();
+
+        // if only this column is show all, then filter on other column
+        if (thisColToggle == 'all' && otherColToggle !== 'all') {
+          $('.row:not(.' + otherColToggle + ', .head, .subtitle)').hide();
+        }
+
+        // if only other column is show all, then filter on this column
+        else if (thisColToggle !== 'all' && otherColToggle == 'all') {
+          $('.row:not(.' + thisColToggle + ', .head, .subtitle)').hide();
+        }
+
+        // if neither columns are show all -- let's filter by both columns like ninjas
+        else if (thisColToggle !== 'all' && otherColToggle !== 'all') {
+          $('.row:not(.' + thisColToggle + ', .head, .subtitle)').hide();
+          $('.row:not(.' + otherColToggle + ', .head, .subtitle)').hide();
+        }
+
+        // hide parents without children
+        $('.subtitle').each(function(el) {
+          //console.log($(this).nextUntil('.subtitle', 'div'));
+          var next = $(this).nextAll('div:visible:first');
+          if (next.hasClass('subtitle') || next.length == 0) {
+            $(this).hide();
+          }
+        });
+
+        // refresh table header waypoints
+        $.waypoints('refresh');
+
+        return true;
+      }
+    });
+
+  });
+</script>
+ 
+<div id="ouibounce-modal">
+<div class="dim-backg">
+<div class="center-modal">
+<div class="upper-row">
+<div class="x-close">X</div>
+</div>
+<div class="lower-row">
+<h2>Join us for a live product demo</h2>
+<h3>We'll walk you through the product family and answer any questions you have about Zendesk</h3>
+<a href="/demo/#demo-form" class="sched-demo">Schedule a demo</a>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="https://d1eipm3vz40hy0.cloudfront.net/js/ouibounce.min.f91b9be1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// Show Modal on Exit
+		ouibounce(document.getElementById('ouibounce-modal'), {
+      sensitivity: 40,
+      cookieExpire: 1,
+      sitewide: true,
+			callback: function() {
+				webutils.track('Marketing - Impression - Bounce Popup');
+			}
+		});
+
+		// Hide modal
+		$('.dim-backg').click(function(){
+			$('#ouibounce-modal').fadeOut();
+		});
+	});
+</script>
+<script type="text/javascript">
+  dataLayer = [];
+</script>
+ 
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-Z4DV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+ 
+<script>
+  if (!window.potentialBot) {
+    webutils.loadGTM();
+    webutils.processGA();
+    webutils.saveEloquaGuid();
+  }
+</script>
+</body>
+</html>

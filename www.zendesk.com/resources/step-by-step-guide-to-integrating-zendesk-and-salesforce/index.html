@@ -1,0 +1,1235 @@
+ <!doctype html>
+<!--[if lt IE 7]> <html class="no-js no-pass-type ie6 oldie" id="unsupported" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js no-pass-type ie7 oldie" id="unsupported" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js no-pass-type ie8 oldie" id="unsupported" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js no-pass-type ie9" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+<head>
+<title>Guide to Integrating Zendesk and Salesforce | Zendesk</title>
+<script>
+    // Create ga object before optimizely loads, since the snippet for
+    // analytics.js is being loaded async through GTM
+    window.ga = window.ga || function() {
+      (window.ga.q = window.ga.q || []).push(arguments)
+    };
+  </script>
+<script src="//cdn.optimizely.com/js/112699136.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta charset="UTF-8"/>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<meta name="google-site-verification" content="2q8u-0_6HxJZdS7l7LYlf-WDEYwIPvdJ_XVujkTFNCY"/>
+<meta name="viewport" content="width=device-width">
+<!--[if lt IE 9]>
+      <script src="//d26a57ydsghvgx.cloudfront.net/www/public/assets/js/css3-mediaqueries.js"></script>
+    <![endif]-->
+<link rel="profile" href="https://gmpg.org/xfn/11"/>
+<link rel="dns-prefetch" href="//d16cvnquvjw7pr.cloudfront.net">
+<link rel="dns-prefetch" href="//ajax.googleapis.com">
+<link rel="shortcut icon" href="//d1eipm3vz40hy0.cloudfront.net/images/logos/zendesk-favicon.ico"/>
+ 
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="//d26a57ydsghvgx.cloudfront.net/www/public/assets/images/logos/zendesk144.png">
+ 
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="//d26a57ydsghvgx.cloudfront.net/www/public/assets/images/logos/zendesk114.png">
+ 
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="//d26a57ydsghvgx.cloudfront.net/www/public/assets/images/logos/zendesk72.png">
+ 
+<link rel="apple-touch-icon-precomposed" href="//d26a57ydsghvgx.cloudfront.net/www/public/assets/images/logos/zendesk57.png">
+<meta property="og:image" content="70180000000TGmu"/>
+<meta category="og:category" content="Resource"/>
+ 
+<meta name="description" content="Integrating Zendesk and Salesforce is the best way to give your sales and support teams a comprehensive view of your customers."/>
+<link rel="canonical" href="https://www.zendesk.com/resources/step-by-step-guide-to-integrating-zendesk-and-salesforce/"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Guide to Integrating Zendesk and Salesforce - Zendesk"/>
+<meta property="og:description" content="Integrating Zendesk and Salesforce is the best way to give your sales and support teams a comprehensive view of your customers."/>
+<meta property="og:url" content="https://www.zendesk.com/resources/step-by-step-guide-to-integrating-zendesk-and-salesforce/"/>
+<meta property="og:site_name" content="Zendesk"/>
+ 
+<link href="https://d1eipm3vz40hy0.cloudfront.net/css/blog.min.898cfb3a.css" media="screen" rel="stylesheet" type="text/css"/></head>
+<body data-useragent class="lang-en responsive " lang="en-US">
+ 
+<script type="text/javascript">
+  window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+  heap.load("1646711747");
+</script>
+ 
+<script type="text/javascript">
+  (function() {
+    var loadConvertro = function() {
+      (function(c){var e=document.createElement("script");
+      e.type='text/javascript';e.async=true;
+      e.src='//d1ivexoxmp59q7.cloudfront.net/'+c+'/live.js';
+      var n=document.getElementsByTagName('script')[0];
+      n.parentNode.insertBefore(e,n);})('zendesk');
+    };
+
+    if (!window.potentialBot) {
+      loadConvertro();
+    }
+  }());
+</script>
+<header class="masthead-refresh  " role="banner">
+<div class="masthead-top">
+<div class="secondary-menu menu">
+<a class="secondary-menu-item" href="/login/">Log In</a>
+<a class="secondary-menu-item" href="//help.zendesk.com/">Product Support</a>
+<ul class="secondary-menu-item company">
+<li class="first">
+<a href="#">Company<span class="ent-text"></span></a>
+<ul class="list-sub">
+<span class="pin"></span>
+<li class="list-item"><a href="/about/">About us</a></li>
+<li class="list-item"><a href="/company/press/">Press</a></li>
+<li class="list-item SL_norewrite"><a href="//investor.zendesk.com/">Investors</a></li>
+<li class="list-item SL_norewrite"><a href="/company/events/">Events</a></li>
+<li class="list-item"><a href="/jobs/">Careers</a></li>
+<li class="list-item"><a href="/company/contact-info/">Legal</a></li>
+</ul>
+</li>
+</ul>
+<a class="secondary-menu-item" href="/support/contact/">Contact Us</a>
+</div>  
+<div class="masthead-stuck-target">
+<div class="js-stuck-inner">
+<header class="site-title">
+<a href="/" class="zendesk-logo" rel="home"></a>
+</header>
+<div class="primary-menu menu">
+<div class="primary-menu-anchor"></div>
+<nav class="primary-menu-list-wrap">
+<ul id="menu-header-navigation-mini" class="primary-menu-list">
+ 
+<li id="smartling-nvg-product" class="SL_swap menu-item list-parent ">
+<a href="/product/tour/" class="menu-heading link-tier-1">Products</a>
+<div class="pin-container"><span class="pin"></span></div>
+<div class="primary-menu-list-dropdown">
+<section>
+<div class="col-5">
+<h2>The Zendesk Family</h2>
+<p>The Zendesk family of products work together to help you improve customer relationships</p>
+</div>
+<div class="col-5">
+<ul>
+<a href="/support/">
+<li class="support-product">
+<span class='product-logo'></span>
+<h4>support</h4>
+<p class="product-subheader">Multi-channel customer service</p>
+</li>
+</a>
+<a href="/help-center/">
+<li class="help-product">
+<span class='product-logo'></span>
+<h4>help&nbsp;center</h4>
+<p class="product-subheader">Knowledge base and self-service</p>
+</li>
+</a>
+</ul>
+</div>
+<div class="col-5">
+<ul>
+<a href="/chat/">
+<li class="chat-product">
+<span class='product-logo'></span>
+<h4>chat</h4>
+<p class="product-subheader">Live chat software</p>
+</li>
+</a>
+<a href="/talk/">
+<li class="talk-product">
+<span class='product-logo'></span>
+<h4>talk</h4>
+<p class="product-subheader">Integrated call center software</p>
+</li>
+</a>
+<a href="/message/">
+<li class="message-product">
+<span class='product-logo'></span>
+<h4>message</h4><span class="new-button">new</span>
+<p class="product-subheader">Social messaging apps</p>
+</li>
+</a>
+</ul>
+</div>
+<div class="col-5">
+<ul>
+<a href="/explore/">
+<li class="explore-product">
+<span class='product-logo'></span>
+<h4>explore</h4><span class="new-button">new</span>
+<p>Analytics and reporting</p>
+</li>
+</a>
+<a href="/connect/">
+<li class="connect-product">
+<span class='product-logo'></span>
+<h4>connect</h4><span class="new-button">new</span>
+<p>Segmentation and targeting</p>
+</li>
+</a>
+<a href="/inbox/">
+<li class="inbox-product">
+<span class='product-logo'></span>
+<h4>inbox</h4>
+<p class="product-subheader">Shared team inbox</p>
+</li>
+</a>
+</ul>
+</div>
+<ul class="bottom-options">
+<li class="title">
+<h3>The flexibility to go even further:</h3>
+</li>
+<li>
+<a href="/apps/"><h3>Zendesk Apps Marketplace</h3></a>
+</li>
+<li>
+<a href="/embeddables/"><h3>Embeddables</h3></a>
+</li>
+</ul>
+</section>
+</div>
+</li>
+<li id="smartling-nvg-pricing" class="SL_swap menu-item list-parent "><a class="menu-heading link-tier-1" href="/product/pricing/">Pricing</a></li>
+<li id="smartling-nvg-demo" class="SL_swap menu-item list-parent "><a class="menu-heading link-tier-1" href="/demo/">Demo</a></li>
+<li id="smartling-nvg-solutions" class="SL_swap menu-item list-parent ">
+<a class="menu-heading link-tier-1" href="/enterprise/">Solutions</a>
+<div class="pin-container"><span class="pin"></span></div>
+<div class="primary-menu-list-dropdown">
+<section>
+<div class="col-5">
+<h2>Solutions</h2>
+<p class="solution-subheader">The Zendesk family of products helps improve relationships with customers and employees, for companies big and small</p>
+</div>
+<div class="col-5">
+<ul>
+<a href="/enterprise/">
+<li>
+<h5>Customer support for enterprise<h5>
+<p class="solution-subheader">Innovation, security, and integration—at scale</p>
+</li>
+</a>
+<a href="/smb/">
+<li>
+<h5>Support for growing businesses<h5>
+<p class="solution-subheader">Flexibility to start small and grow</p>
+</li></a>
+</ul>
+</div>
+<div class="col-5">
+<ul>
+<a href="/internal-help-desk/">
+<li>
+<h5>Internal service desk for employees<h5>
+<p class="solution-subheader">Service desks for HR, IT, and more </p>
+</li>
+</a>
+<a href="/mobile-solutions/">
+<li>
+<h5>Customer support for mobile<h5>
+<p class="solution-subheader">Engage with customers everywhere</p>
+</li></a>
+</ul>
+</div>
+</section>
+</div>
+</li>
+<li id="smartling-nvg-customers" class="SL_swap menu-item list-parent "><a class="menu-heading link-tier-1" href="/customer-experience/">Services</a></li>
+<li id="smartling-nvg-resources" class="SL_swap menu-item list-parent ">
+<a class="menu-heading link-tier-1" href="/resources/">Resources</a>
+<div class="pin-container"><span class="pin"></span></div>
+<div class="primary-menu-list-dropdown">
+<section>
+<div class="col-5">
+<h2>Resources</h2>
+<p>Learn more about Zendesk and how to create a better customer experience</p>
+</div>
+<div class="col-5">
+<ul>
+<a href="/resources/">
+<li>
+<h5>Library<h5>
+<p>Guides, research, videos, and resources</p>
+</li>
+</a>
+<a href="/blog/">
+<li>
+<h5>Blog<h5>
+<p>News, tips, and best practices</p>
+</li>
+</a>
+<a href="/why-zendesk/customers/">
+<li>
+<h5>Customer Stories<h5>
+<p>See what success with Zendesk looks like</p>
+</li>
+</a>
+</ul>
+</div>
+<div class="col-5">
+<ul>
+<a href="/company/events/">
+<li>
+<h5>Events<h5>
+<p>Come meet us in person</p>
+</li>
+</a>
+<a href="/support/webinars/">
+<li>
+<h5>Live Webinars<h5>
+<p>Online events</p>
+</li>
+</a>
+<a href="//relate.zendesk.com/">
+<li>
+<h5>Relate by Zendesk<h5>
+<p>Customers. Colleagues. Community. It&apos;s complicated.</p>
+</li>
+</a>
+</ul>
+</div>
+<div class="col-5">
+<ul>
+<a href="/partner/">
+<li>
+<h5>Partners<h5>
+<p>How to locate or become a Zendesk partner</p>
+</li>
+</a>
+<a href="//developer.zendesk.com/">
+<li>
+<h5>API &#038; Developers<h5>
+<p>Info for building things with Zendesk</p>
+</li>
+</a>
+</ul>
+</div>
+</section>
+</div>
+</li>
+<li class="list-parent register-desktop"><a href="/register/" id="nav-get-started"><span class="register">Get Started</span></a></li>
+<li class="register-mobile">
+<a id="nav-get-started-mobile" href="/register/">Get Started</a>
+</li>
+</ul>
+ 
+</nav>
+ 
+</div>
+ 
+</div>
+</div>
+</div>  
+<div class="clearfix"></div>
+</header>
+<div id="filter-tag-container" class="filter-resources sticky-nav">
+<div class="filter-inner">
+<a class="blog-label" href="/resources/">Library</a>
+<div class="filter-by"><span class="filter-by-text">Filter by: </span></div>
+<ul class="filter-list">
+<li class="filter-option">
+<a class="filter-parent">Topics</a>
+<div class="filter-menu">
+<a href="/resources/tags/library-multichannel-customer-support/">Multichannel customer support</a>
+<a href="/resources/tags/library-knowledge-base-self-service/">Knowledge base & self-service</a>
+<a href="/resources/tags/library-shared-team-inbox/">Shared team inbox</a>
+<a href="/resources/tags/library-live-chat-software/">Live chat software</a>
+<a href="/resources/tags/library-integrated-call-center/">Integrated call center</a>
+<a href="/resources/tags/library-social-media-messaging/">Social media messaging</a>
+<a href="/resources/tags/library-customer-data-analytics/">Customer data & analytics</a>
+<a href="/resources/tags/library-customer-segmentation-targeting/">Customer segmentation & targeting</a>
+</div>
+</li>
+<li class="filter-option">
+<a class="filter-parent">Types</a>
+<div class="filter-menu">
+<a href="/resources/tags/library-guides/">Guides</a>
+<a href="/resources/tags/library-research-reports/">Research & reports</a>
+<a href="/resources/tags/library-webinars/">Webinars</a>
+<a href="/resources/tags/library-videos/">Videos</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="main" class="single-resource">
+<div class="sticky-nav-offsetter"></div>
+<div class="ml-tab" id="zendesk-resource">
+<div class="widecol">
+<article class="resource resource-gated hasleadgen">
+<header>
+<h1>Guide to Integrating Zendesk and Salesforce</h1>
+</header>
+<div class="resource-meta">
+<div class="col-lt">
+<div id="blog-tags">
+<a class="blog-tag" href="/resources/tags/zendesk-products-apps-and-integrations/"><div>Apps and Integrations</div></a>
+<a class="blog-tag" href="/resources/tags/library-guides/"><div>Guides</div></a>
+</ul>
+</div>
+</div>
+</div>
+ 
+<div class="resource-body">
+<div class="resource-body-teaser"><p dir="ltr"><em>Executive summary:</em></p>
+<p dir="ltr"><span style="line-height: 1.5em;">The </span><a style="line-height: 1.5em;" title="Zendesk for Salesforce integration" href="https://www.zendesk.com/apps/salesforce/" target="_blank">Zendesk for Salesforce integration</a><span style="line-height: 1.5em;"> was designed to be flexible. Based on your needs, you can choose to implement only the functionality that makes the most sense for your business. </span><span style="line-height: 1.5em;">The "Guide to Integrating Zendesk and Salesforce" describes common use cases and links to the detailed documentation you’ll need to complete the process.</span></p>
+<p dir="ltr">You'll learn:</p>
+<ul>
+<li>how data maps between Zendesk and Salesforce</li>
+<li>what you can do with this integration</li>
+<li>where customization is required</li>
+<li>which use cases best meet your needs, with step-by-step instructions</li>
+<li>more about data syncing</li>
+<li>where to find additional resources</li>
+</ul>
+</div>
+<div class="resource-body-content animate-slideup ">
+<style><!--
+#see-all{opacity:0;display:none;}
+--></style>
+<h2>Guide to Integrating Zendesk and Salesforce</h2>
+<p dir="ltr">Zendesk and Salesforce are a powerful combination. Together, they're the best way to give your sales and support teams a comprehensive view of your customers. When sales and support are in sync, you can give your customers a great experience, improving satisfaction and increasing conversion.</p>
+<p dir="ltr">Imagine how useful it might be for your sales team to know that a customer has open or unresolved issues when attempting to upsell or renew a contract. With this integration, sales reps can view existing tickets alongside the Lead or Contact record and, if needed, create a new ticket from Salesforce. But that’s just one use case.</p>
+<p dir="ltr">In this guide, we cover the most common use cases available right out of the box, with links to click through to the detailed documentation you’ll need to complete the process. Begin by asking yourself: What tasks do you hope to realize by <a title="integrating a CRM with Zendesk" href="https://www.zendesk.com/resources/matchmaking-in-the-cloud/" target="_blank">integrating a CRM with Zendesk</a>? What business needs can this integration help you fulfill?</p>
+<p dir="ltr">The answers to these questions will determine which features to implement and which you can skip. They might also help identify where and why you might want to go a custom route.</p>
+<h2>Before we begin: terminology</h2>
+<p dir="ltr">It’s important to understand from the get-go how data from Zendesk and Salesforce will map once integrated. (Zendesk and Salesforce “speak” are naturally a little different, but we think we’ve learned to play together rather nicely.)</p>
+<p dir="ltr">Common terminology used in Zendesk and Salesforce relate in the following way:</p>
+<p><img style="width: 100%; margin-right: 12px;" alt="Zendesk Salesforce mapping" src="https://d26a57ydsghvgx.cloudfront.net/content/resources/SalesforceIntegrationGuideTableScreenshot.png"/></p>
+<p dir="ltr">You might want to consider whether your Salesforce data will benefit from some clean up or restructuring before integrating with Zendesk. For example, if there are multiple Accounts with the same name in Salesforce, these Accounts cannot map over to become multiple orgs with the same name in Zendesk. This is because Zendesk requires:</p>
+<ul>
+<li><strong>users</strong> (Salesforce Contacts or Leads) to be unique by email address, and</li>
+<li><strong>orgs</strong> (Salesforce Accounts) to be unique by organization name.</li>
+</ul>
+<p dir="ltr">If you have the resources, restructuring how data is stored in Salesforce can improve Zendesk’s ability to create more direct mappings when you’re pulling data into Zendesk.</p>
+<h2>Benefits at a glance</h2>
+<p dir="ltr">The Zendesk for Salesforce integration makes it possible to:</p>
+<ul>
+<li>view Salesforce data in Zendesk</li>
+<li>view Zendesk tickets in Salesforce</li>
+<li>create and edit Zendesk tickets in Salesforce</li>
+<li>send Zendesk tickets into Salesforce</li>
+<li>sync Salesforce Accounts to Zendesk orgs</li>
+<li>sync Salesforce Contacts or Leads to Zendesk users</li>
+</ul>
+<p>In the sections below we’ll explain why you might want to take these actions, where to find the steps that will show you how, and what you might want to think about along the way.</p>
+<h2>Spoiler alert: there are limitations</h2>
+<p dir="ltr">In the spirit of transparency, it’s important to note that not all integrations can do all things. Out of the box, the integration does not support:</p>
+<ul>
+<li>syncing Cases from Salesforce to Zendesk</li>
+<li>syncing users from Zendesk to Salesforce on an ongoing basis</li>
+<li>Person Accounts in Salesforce (The sidebar application in Zendesk can pull in user information if the Person Account has an email associated with the record.)</li>
+<li>the hierarchy of Parent/Child Accounts in Salesforce (All data transfers but does not retain its hierarchical structure once in Zendesk.)</li>
+<li>displaying Salesforce user data inside Zendesk user profiles (Instead, user data is accessible from the ticket view.)</li>
+<li>instant refresh of app data (Instead, data is refreshed at regular intervals to help reduce the number of API calls to Salesforce.)</li>
+</ul>
+<p>That said, we have a few tricks up our sleeve. We want your integration to be a success. Talk to your account manager about customization and guided implementations.</p>
+<h2>Common use cases</h2>
+<p dir="ltr">As nearly all the functionality of the Zendesk for Salesforce integration can be implemented and used independently, you have the flexibility to choose which pieces of the integration benefit your particular business use case. The scenarios below represent the most common reasons customers are interested in, and benefit from, the Zendesk for Salesforce integration.</p>
+<h3>1. View the status of a Salesforce Account in Zendesk</h3>
+<p dir="ltr">Many Zendesk customers want to access additional information about their users inside a Zendesk ticket. This enables agents to see user information at a glance in the apps panel of a Zendesk ticket. User information might include subscription level, whether a particular account has an open opportunity, or additional customer notes.</p>
+<p dir="ltr">What’s great about this? Your agents don’t need a Salesforce user license, and they’ll never have to navigate away from Zendesk. Plus, you can configure what Salesforce information is shared in Zendesk.</p>
+<p dir="ltr">To view and configure Salesforce Account data inside a Zendesk ticket:</p>
+<ol>
+<li><a title="Install the Zendesk for Salesforce app in Salesforce" href="https://support.zendesk.com/entries/22077208" target="_blank">Install the Zendesk for Salesforce app in Salesforce</a></li>
+<li><a title="Install and configure the app in Zendesk" href="https://support.zendesk.com/entries/22066576" target="_blank">Install and configure the app in Zendesk</a></li>
+</ol>
+<h3>2. Set up business rules in Zendesk using data from Salesforce</h3>
+<p dir="ltr">You can take the above scenario a step further and set up business rules in Zendesk based on the Salesforce data you pull in. For example, you may want to automate a process that gives users flagged as VIPs higher priority in the ticket queue.</p>
+<p dir="ltr">To integrate Salesforce data so that you can set up business rules in Zendesk:</p>
+<ol>
+<li><a title="Install the Zendesk for Salesforce app in Salesforce" href="https://support.zendesk.com/entries/22077208" target="_blank">Install the Zendesk for Salesforce app in Salesforce</a></li>
+<li><a title="Sync data from Salesforce to Zendesk" href="https://support.zendesk.com/entries/22066397" target="_blank">Sync data from Salesforce to Zendesk</a></li>
+</ol>
+<p dir="ltr">All syncing logic is handled within the Salesforce package, so no additional installation or configuration of the app in Zendesk is required.</p>
+<p dir="ltr"><strong>Note:</strong> This is an advanced feature of the integration. It’s important to keep in mind that the way data is structured in Salesforce affects how data maps to your Zendesk. Just as an example, a free-form text field in Salesforce may appear in Zendesk as a tag. Therefore, it’s worth considering whether you want to invest time cleaning up data in Salesforce in order to avoid doing more manual adjustments after integration. New Salesforce installations, or smaller Salesforce organizations with clean data, can go ahead and give this feature a try. For more complex Salesforce organizations, contact your Zendesk account manager to learn more about a guided implementation.</p>
+<h3>3. Share Zendesk data with your sales team—inside Salesforce</h3>
+<p dir="ltr">Let’s face it—your sales reps live in Salesforce, but they want to know whether their Accounts have open tickets in Zendesk. That’s because, these days, the line between sales and support is thin. Accessing Zendesk data in Salesforce is a nice way to help sales reps take a customer’s temperature before making a call. Sales reps might need only a quick snapshot of customer activity in Zendesk, or they might benefit from the ability to create or edit Zendesk tickets from within Salesforce. Adding an extra level of support may just help close a deal.</p>
+<p dir="ltr">Bringing Zendesk data into Salesforce can also allow you to accomplish other tasks, such as creating a new Contact or Account in Salesforce when a new ticket is created in Zendesk. The options are many.</p>
+<p dir="ltr">And on that note, this integration actually provides a couple different options for accessing Zendesk data inside Salesforce, so you’ll only need to configure one of the two possibilities outlined below.</p>
+<ol>
+<li dir="ltr">
+<p dir="ltr"><strong>Send Zendesk tickets into Salesforce</strong><br/>
+This is the most powerful of the two options for viewing Zendesk data in Salesforce. This option uses tickets in your Zendesk to create new records in a Salesforce custom object called Zendesk Ticket. The ticket requester is automatically matched to a Contact, and the ticket’s organization is automatically matched to an Account. If Salesforce doesn’t find an existing Account for a user, a Contact and Account will be automatically created for that Zendesk ticket user. This enables you to easily see tickets from the Contact and Account pages.</p>
+<p>One advantage of this method is that Zendesk ticket data will live in Salesforce, so you can use Salesforce reports to relay data across Zendesk and Salesforce, which is especially powerful if you’re on the Enterprise edition of Salesforce. Custom workflows can also be created by using this data.</p>
+<p>If you are concerned about running up against data storage limits in Salesforce, however, this might not be the best option for you. Additionally, this option shows only new tickets; there is no way to import previously closed tickets.</p>
+<p>To view Zendesk tickets in Salesforce using this method:</p>
+<p>1. <a title="Install the Zendesk for Salesforce app in Salesforce" href="https://support.zendesk.com/entries/22077208" target="_blank">Install the Zendesk for Salesforce app in Salesforce<br/>
+</a>2. <a title="Install and configure the app in Zendesk" href="https://support.zendesk.com/entries/22066576" target="_blank">Install and configure the app in Zendesk<br/>
+</a>3. <a title="Set up sending Zendesk tickets into Salesforce" href="https://support.zendesk.com/entries/22066457" target="_blank">Set up sending Zendesk tickets into Salesforce</a></li>
+</ol>
+<ol start="2">
+<li dir="ltr">
+<p dir="ltr"><strong>View Zendesk tickets using Account, Contact, and Lead VisualForce pages</strong><br/>
+This option queries Zendesk in real time from the Account, Contact, Lead, and Opportunity pages, and does not send any data into Salesforce. Instead of automatically matching Contacts with ticket requestors and Accounts with organizations, this option enables you to choose the matching scheme with which to display tickets.</p>
+<p>This might be a better option for Zendesk customers whose Accounts do not exactly match Zendesk organizations, for customers who do not use organizations at all in Zendesk, or for customers who do not want to create new Accounts or Contacts in Salesforce based on Zendesk data. It’s also a better option if you’re worried about running up against API limits, as this method doesn’t use any API calls.</p>
+<p>The downside is that you cannot create custom workflows or reports based on Zendesk data with this option.</p>
+<p>To view Zendesk tickets in Salesforce using this method:</p>
+<p>1. <a title="Install the Zendesk for Salesforce app in Salesforce" href="https://support.zendesk.com/entries/22077208" target="_blank">Install the Zendesk for Salesforce app in Salesforce<br/>
+</a>2. <a title="Add ticket view to your Account, Contact, Lead, and Opportunity layouts" href="https://support.zendesk.com/entries/22579147" target="_blank">Add ticket view to your Account, Contact, Lead, and Opportunity layouts</a></li>
+</ol>
+<h3>4. Allow sales reps to create or comment on Zendesk tickets from Salesforce</h3>
+<p dir="ltr">It’s easier for sales, and a better experience for your customers, if sales account managers can actively engage in tickets with their customers (or create a ticket on the customer’s behalf) as soon as they realize the customer needs support, and without ever navigating away from Salesforce. If you’ve configured either of the options above, your sales reps will also have the ability to create and edit Zendesk tickets from Salesforce—if each sales rep has an agent seat and credentials within Zendesk. Customers on the Zendesk <a title="Enterprise Plan" href="https://www.zendesk.com/enterprise/" target="_blank">Enterprise Plan</a> have an unlimited number of additional people that can interact with tickets for free (as “Light Agents”).</p>
+<p dir="ltr">To configure the ability for sales reps to create and edit Zendesk tickets in Salesforce:</p>
+<ol>
+<li>Follow the installation and configuration steps from one of the two options in use case #3 above.</li>
+<li>Pay close attention to the following sections of the documentation:</li>
+</ol>
+<ul>
+<li><a title="Editing from the Zendesk Ticket object" href="https://support.zendesk.com/entries/22066457/#topic_j2g_qtp_l3" target="_blank">Editing from the Zendesk Ticket object</a></li>
+<li><a title="Adding ticket view to your Account, Contact, Lead, and Opportunity layouts" href="https://support.zendesk.com/entries/22579147" target="_blank">Adding ticket view to your Account, Contact, Lead, and Opportunity layouts</a></li>
+</ul>
+<h3>5. Automatically create a user record in Zendesk when a Contact is created in Salesforce</h3>
+<p dir="ltr">It can be helpful to already have a user record in Zendesk for customers that have not yet requested support. When they do submit a request, agents will already have insight into their status as a customer. And since many customers store valuable information in Salesforce about the people they do business with, you can enable this sync and employ user data to help drive workflow. For example, you can create a trigger to automatically increase the priority of tickets from users marked as VIP.</p>
+<p>This is with a one-way sync from Salesforce to Zendesk that keeps users in sync with your Contacts and Leads, and there are some limitations. This integration matches Contacts and Leads to users one-for-one based on email address, and expects all Contacts and Leads to have a unique email address. However, not all Salesforce implementations adhere to these rules. If you have multiple Contacts that share the same email address (e.g., info@salesforce.com), this might not be the right feature for you. This integration also doesn’t support Person Accounts, as these are treated as organizations in Zendesk rather than users.</p>
+<p dir="ltr">To automatically create new user records in Zendesk based on new Contacts in Salesforce:</p>
+<ol>
+<li><a title="Install the Zendesk for Salesforce app in Salesforce" href="https://support.zendesk.com/entries/22077208" target="_blank">Install the Zendesk for Salesforce app in Salesforce</a></li>
+<li><a title="Configure user and organization syncing in Salesforce" href="https://support.zendesk.com/entries/22066397" target="_blank">Configure user and organization syncing in Salesforce</a> (with special attention to the “<a title="Synchronizing Accounts with organizations and Contacts/Leads with users" href="https://support.zendesk.com/entries/22066397#topic_y1j_qtp_l3" target="_blank">Synchronizing Accounts with organizations and Contacts/Leads with users</a>” topic)</li>
+</ol>
+<p dir="ltr">You can filter the Contacts and Leads that are synced into Zendesk based on record type or using a Contact/Lead drop-down of your choosing.</p>
+<p dir="ltr"><strong>Note:</strong> This is an advanced feature. New Salesforce installations, or smaller Salesforce organizations with clean data, can go ahead and give this feature a try. For more complex Salesforce organizations, contact your Zendesk account manager to learn more about a guided implementation.</p>
+<h3>6. Automatically create an organization in Zendesk when an Account is created in Salesforce</h3>
+<p dir="ltr">Many customers store valuable information in Salesforce about the companies they do business with such as subscriptions, support level entitlements, or even locations. By enabling this sync, you can add this information to your Zendesk organizations to help drive workflows. For example, you could set up a trigger to automatically reassign tickets from companies with “Gold” service entitlement to a different support group.</p>
+<p dir="ltr">This is a one-way sync from Salesforce to Zendesk that keeps organizations in sync with your Accounts, and there are some limitations. The integration matches Accounts to organizations one-for-one, based on name, and expects all Accounts to have a unique name. However, not all Salesforce implementations adhere to these rules. If you have Accounts with duplicate names, this might not be the right feature for you. Also, the integration does not support Parent Accounts, so all Accounts will be treated as organizations in Zendesk.</p>
+<p dir="ltr">To automatically create new orgs in Zendesk based on new Accounts in Salesforce:</p>
+<ol>
+<li><a title="Install the Zendesk for Salesforce app in Salesforce" href="https://support.zendesk.com/entries/22077208" target="_blank">Install the Zendesk for Salesforce app in Salesforce</a></li>
+<li><a title="Configure user and organization syncing in Salesforce" href="https://support.zendesk.com/entries/22066397" target="_blank">Configure user and organization syncing in Salesforce</a> (with special attention to the “<a title="Synchronizing Accounts with organizations and Contacts/Leads with users" href="https://support.zendesk.com/entries/22066397#topic_y1j_qtp_l3" target="_blank">Synchronizing Accounts with organizations and Contacts/Leads with users</a>” topic)</li>
+</ol>
+<p dir="ltr">You can filter the Accounts that are synced into Zendesk based on record type or an Account drop-down of your choosing.</p>
+<p><strong>Note:</strong> This is an advanced feature. New Salesforce installations or smaller Salesforce organizations with clean data can go ahead and give this feature a try. However, for more complex Salesforce organizations, we recommend contacting your Zendesk account manager to help determine whether this is the right feature for you to implement.</p>
+<h2>A few (more) words about syncing data</h2>
+<p dir="ltr">We know that keeping Zendesk and Salesforce in sync involves some work on the back end, and it’s important to know a little about your choices.</p>
+<h3>Bulk sync</h3>
+<p dir="ltr">Performing bulk syncs generally makes sense for smaller businesses, or customers with very clean data. In other words, if your data is manageable, a bulk sync will be efficient and smooth.</p>
+<p dir="ltr">You can bulk sync Zendesk users to Contacts or Leads, or organizations to Accounts.</p>
+<h3>Ongoing sync</h3>
+<p dir="ltr">If you don’t need all Salesforce data in Zendesk at once, you might want to think about running ongoing syncs to keep  up to date only the data you’re most interested in. Running an ongoing sync makes sense in a lot of ways, but is not a requirement.</p>
+<p dir="ltr">For example, you might want to set up an ongoing sync as soon as you’re ready for new or updated Contact, Lead, or Account records to update Zendesk. As new customers are added into Salesforce, Zendesk is made automatically aware of them, and your agents are set up to provide better support.</p>
+<h3>Syncing tags</h3>
+<p dir="ltr">Sometimes there’s confusion about how tags are synced. In general, only fields which need to be used in business rules, reporting, or customer lists or views should be synced as tags. Alternately, you can sync data as custom user or org fields, in addition to syncing them as tags.</p>
+<p dir="ltr">By syncing fields as tags, you’ll pass the tags on with the associated ticket, allowing you to set up triggers based on them, or to create ticket views to easily see all tickets tagged a particular way. Tags don’t need to be synced if you’re only going to display data for informational purposes. <a title="Read more" href="https://support.zendesk.com/entries/20201222-Adding-tags-to-users-and-organizations" target="_blank">Read more</a> about how tagging users and orgs affects ticket workflow and moderation.</p>
+<h2>Additional resources</h2>
+<p dir="ltr">We know this integration is a big deal, and we’re not going to leave you hanging. You can always contact your Zendesk account manager with any questions you have about this integration. More information can also be found on the following pages:</p>
+<ul>
+<li><a title="Salesforce: Choosing Zendesk for Salesforce features" href="https://support.zendesk.com/entries/70285976" target="_blank">Salesforce: Choosing Zendesk for Salesforce features</a></li>
+<li><a title="Getting more out of Zendesk’s new Salesforce app (v3)" href="https://support.zendesk.com/entries/22587331-getting-more-out-of-zendesk-s-new-salesforce-app-v3" target="_blank">Getting more out of Zendesk’s new Salesforce app (v3)</a></li>
+<li><a title="Creating Custom Fields: Salesforce Setup Guide" href="https://help.salesforce.com/apex/HTViewHelpDoc?id=adding_fields.htm&language=en" target="_blank">Creating Custom Fields: Salesforce Setup Guide</a></li>
+<li><a title="Salesforce FAQ and Known Issues" href="https://support.zendesk.com/entries/22786321" target="_blank">Salesforce FAQ and Known Issues</a></li>
+</ul>
+<a id="see-all" class="button button-white">Continue reading <span></span></a> </div> 
+</div> 
+<div id="reg">
+<div id="form-wrap">
+<form class="form-gray form-lead" id="resource-lead" method="post">
+<div class="full loading clearfix">
+<div class="loading-inner">
+<span class="loading-img"></span>
+<p class="loading-txt">Fetching what you need. Please wait...</p>
+</div>
+</div>
+<ul id="radios">
+<p id="form-cta">Complete the form below to read your complete white paper:</p> </ul>
+<ul>
+<li>
+<label>Enter your full name</label>
+<input placeholder="Full name" class='required' name="owner[name]" id="owner[name]" type='text' maxlength='255' tabIndex='1' tabindex="1"/>
+</li>
+<li>
+<label>Please enter company name</label>
+<input placeholder="Company Name" class="required" name="account[name]" id="account[name]" type='text' value="" maxlength='255' tabIndex='2'/>
+</li>
+<li>
+<label>Please enter email</label>
+<input placeholder="Email" class='required' name="owner[email]" id="owner[email]" type='email' value="" maxlength='255' tabIndex='3'/>
+</li>
+<li>
+<label>Please enter phone</label>
+<input placeholder="Phone" class='required' name="address[phone]" id="address[phone]" type='text' value="" maxlength='255' tabIndex='4'/>
+</li>
+<li>
+<label>Select Job Level</label>
+<span class="select-label">
+<span class="txt">Job level</span>
+<span class="toggle"></span>
+</span>
+<select type="select" class='select required' name="job" id="job">
+<option value="-" selected>Please Select Job</option>
+<option value="C-Level">C-Level</option>
+<option value="VP-Level">VP-Level</option>
+<option value="Director">Director</option>
+<option value="Manager">Manager</option>
+<option value="Faculty">Faculty</option>
+<option value="Agency/Administration Head">Agency/Administration Head</option>
+<option value="Other">Other</option>
+</select>
+</li>
+<li>
+<label>Select Department</label>
+<span class="select-label">
+<span class="txt">Department</span>
+<span class="toggle"></span>
+</span>
+<select type="select" class='select required' name="department" id="department">
+<option value="-" selected>Please select department</option>
+<option value="Customer Service">Customer Service</option>
+<option value="Facilities">Facilities</option>
+<option value="Finance/Accounting">Finance/Accounting</option>
+<option value="Human Resources">Human Resources</option>
+<option value="IT">IT</option>
+<option value="Legal">Legal</option>
+<option value="Marketing">Marketing</option>
+<option value="Professional Services/Consulting">Professional Services/Consulting</option>
+<option value="Shared Service">Shared Service</option>
+<option value="Other">Other</option>
+</select>
+</li>
+<li>
+<label>Select Industry</label>
+<span class="select-label">
+<span class="txt">Industry</span>
+<span class="toggle"></span>
+</span>
+<select type="select" class='select required' name="industry" id="industry">
+<option value="-" selected>Please Select Industry</option>
+<option value="Government">Government</option>
+<option value="Financial Services">Financial Services</option>
+<option value="Healthcare">Healthcare</option>
+<option value="Hospitals and Healthcare">Hospitality</option>
+<option value="Media and Entertainment">Media</option>
+<option value="Retail">Retail</option>
+<option value="Other">Other</option>
+</select>
+</li>
+<li>
+<label>Please Select # of Employees</label>
+<span class="select-label select-fat"><span class="toggle"></span><span class="txt">Select # of Employees</span></span>
+<select type="select" class='select required' name="account[help_desk_size]" id="account[help_desk_size]" size='1' tabIndex='5'>
+<option value="-" selected>Number of employees</option>
+<option value="5000+">5000+</option>
+<option value="1000-4999">1000-4999</option>
+<option value="500-999">500-999</option>
+<option value="250-499">250-499</option>
+<option value="100-249">100-249</option>
+<option value="50-99">50-99</option>
+<option value="1-49">1-49</option>
+</select>
+</li>
+<li class="last" style="display:block; width: 100%;"> 
+<span class="separator"></span>
+<p class="help">All fields are required</p>
+<a class="button button-white btn-submit" type="button" value="" name="submitButton">Submit</a>
+</li>
+<li style="display:none;">
+<input type="hidden" name="elqFormName" id="elqFormName" value="WebsiteResourceLead">
+<input type="hidden" name="elqCustomerGUID" id="elqCustomerGUID" value="">
+<input type="hidden" name="elqCookieWrite" id="elqCookieWrite" value="0">
+<input type="hidden" name="elqSiteID" id="elqSiteID" value="2136619493">
+<input type="hidden" name="Web_Offer_Name__c" id="Web_Offer_Name__c" value="Guide to Integrating Zendesk and Salesforce"/>
+ 
+<input type="hidden" name="GA_Medium" id="GA_Medium" value=""/>
+<input type="hidden" name="GA_Source" id="GA_Source" value=""/>
+ 
+<input type="hidden" name="Opti_ID" id="Opti_ID" value=""/>
+<input type="hidden" name="Opti_Variation_ID" id="Opti_Variation_ID" value=""/>
+ 
+<input type="hidden" name="trial_extras[Convertro_SID__c]" id="trial_extras[Convertro_SID__c]" value="">
+<input type="hidden" name="trial_extras[Sub_Industry]" id="trial_extras[Sub_Industry]" value="">
+<input type="hidden" name="trial_extras[Behavioral_1__c]" id="trial_extras[Behavioral_1__c]" value="">
+<input type="hidden" name="trial_extras[Behavioral_2__c]" id="trial_extras[Behavioral_2__c]" value="">
+<input type="hidden" name="trial_extras[Behavioral_3__c]" id="trial_extras[Behavioral_3__c]" value="">
+<input type="hidden" name="trial_extras[Behavioral_4__c]" id="trial_extras[Behavioral_4__c]" value="">
+<input type="hidden" name="trial_extras[DB_City__c]" id="trial_extras[DB_City__c]" value="">
+<input type="hidden" name="trial_extras[DB_State__c]" id="trial_extras[DB_State__c]" value="">
+<input type="hidden" name="trial_extras[DB_CName__c]" id="trial_extras[DB_CName__c]" value="">
+<input type="hidden" name="trial_extras[DB_CCode__c]" id="trial_extras[DB_CCode__c]" value="">
+<input type="hidden" name="trial_extras[Country__c]" id="trial_extras[Country__c]" value="">
+<input type="hidden" name="trial_extras[DB_Zip__c]" id="trial_extras[DB_Zip__c]" value="">
+<input type="hidden" name="trial_extras[Region__c]" id="trial_extras[Region__c]" value="">
+<input type="hidden" name="trial_extras[First_Touch__c]" id="trial_extras[First_Touch__c]"/>
+<input type="hidden" name="trial_extras[Last_Touch__c]" id="trial_extras[Last_Touch__c]"/>
+ 
+<input type="hidden" name="ZOBU_1" id="ZOBU_1" value="">
+<input type="hidden" name="ZOBU_2" id="ZOBU_2" value="">
+<input type="hidden" name="ZOBU_3" id="ZOBU_3" value="ZOBU 1A">
+<input type="hidden" name="FirstName" id="FirstName"/>
+<input type="hidden" name="LastName" id="LastName"/>
+<input type="hidden" name="event_key" id="event_key" value=""/>
+<input type="hidden" name="event_id" id="event_id" value=""/>
+<input type="hidden" name="MailingCountry" id="MailingCountry" value="United States"/>
+<input type="hidden" name="SFDCCampaigncode" id="SFDCCampaigncode" value="70180000000TGmu"/>
+<input type="hidden" name="Web_Offer__c" id="Web_Offer__c" value="white paper"/>
+</li>
+</ul>
+</form>
+</div>
+</div>
+</article>  
+<div class="promo-wrap">
+<div class="block">
+<a href="https://www.zendesk.com/resources/mobile-apps-in-the-enterprise/">
+<img alt="Mobile Apps in the Enterprise" src="https://d16cvnquvjw7pr.cloudfront.net/images/p-resources/promo-infographic-mobile-in-the-enterprise.jpg" width="290" height="165"/>
+<h2>Mobile Apps in the Enterprise</h2>
+</a>
+</div>
+<div class="block">
+<a href="https://www.zendesk.com/resources/the-impact-of-customer-service/">
+<img alt="The Good, the Bad, and the Ugly: The Impact of Customer Service" src="https://d16cvnquvjw7pr.cloudfront.net/images/p-resources/promo-infographic-good-bad-ugly.png" width="290" height="165"/>
+<h2>The Good, the Bad, and the Ugly: The Impact of Customer Service</h2>
+</a>
+</div>
+</div>
+</div> 
+<div class="narrowcol">
+ 
+<div class="resource-links">
+<h4 class="note">Resources</h4>
+<nav>
+<ul class="menu-sub">
+<ul id="menu-content-landing-page-sidebar" class="menu"><li id="menu-item-35338" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35338"><a href="https://www.zendesk.com/tour/">Product tour</a></li>
+<li id="menu-item-37135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37135"><a href="https://www.zendesk.com/product/pricing-legacy/">Pricing Legacy</a></li>
+<li id="menu-item-37136" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37136"><a href="https://www.zendesk.com/support/contact/">Contact us</a></li>
+</ul> </ul>
+</nav>
+</div>
+<div class="separator"></div>
+<div class="popular-links">
+<h4 class="note">Most Popular</h4>
+<nav>
+<ul class="whitebox-menu">
+<li>
+<a href="https://www.zendesk.com/resources/zendesk-for-salesforce-integration/"><span style="background-image:url(https://d16cvnquvjw7pr.cloudfront.net/images/p-resources/promo-video-zendesk-for-salesforce-integration.jpg)"></span><p class="title">Zendesk for Salesforce Integration</p></a> </li>
+<li>
+<a href="https://www.zendesk.com/resources/matchmaking-in-the-cloud/"><span style="background-image:url(https://d16cvnquvjw7pr.cloudfront.net/images/p-resources/promo-link-matchmaking-in-the-cloud.png)"></span><p class="title">Matchmaking in the Cloud: A Perfect Marriage of Sales and Support</p></a> </li>
+<li>
+<a href="https://www.zendesk.com/resources/zendesk-apps/"><span style="background-image:url(https://d16cvnquvjw7pr.cloudfront.net/images/p-resources/promo-video-zendesk-apps.jpg)"></span><p class="title">Zendesk Apps</p></a> </li>
+</ul>
+</nav>
+</div>
+<div class="separator"></div>
+<div class="newsletter-offsetter"></div>
+<div id="newsletter-sub-container">
+<div id="newsletter-sub">
+<h4 class="note">Newsletter</h4>
+<form id="newsletter" class="form-gray" method="post" name="eloquaform">
+<label class="success"><span></span>Welcome to the club!</label>
+<ul>
+<li class="error">
+<div class="depth-wrap">
+<input name="owner[email]" id="owner[email]" type="text" placeholder="Enter your email" class="email">
+<a class="register">Subscribe</a>
+</div>
+<label style="display: block; opacity: 1;"><span></span>Please use a valid email</label>
+</li>
+<li style="display:none">  
+<input type="hidden" name="elqFormName" id="elqFormName" value="WebsiteNewsletterSignup_new">
+</li>
+</ul>
+</form>
+</div>
+</div>
+</div> 
+</div>
+</div> 
+<div class="footer-spacer"></div>
+</div>
+<div class="clearfix"></div>
+<footer class="clear">
+<div class="sitemap mega-footer">
+<div class="col-960">
+<nav class="primary-menu-list-wrap">
+<ul id="menu-footer-navigation" class="primary-menu-list">
+<li id="smartling-nav-footer-product" class="SL_swap menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children list-parent "><a href="/support/">Our Products</a>
+<div class="primary-menu-list-dropdown"><span class="pin"></span>
+<ul>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/support/">Support</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/help-center/">Help Center</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/chat/">Chat</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/talk/">Talk</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/message/">Message</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/inbox/">Inbox Team Email</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/explore/">Explore</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/connect/">Connect</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/apps/">Integrations &#038; Apps</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/embeddables/">Embeddables</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/zendesk-insights/">Insights &amp; Analytics</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/whats-new/">Product Updates</a></li>
+</ul>
+</div>
+</li>
+<li id="smartling-nav-footer-features" class="SL_swap menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children list-parent "><a href="/">Top Features</a>
+<div class="primary-menu-list-dropdown"><span class="pin"></span>
+<ul>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/help-desk-software/features/ticketing-system/">Ticketing System</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/help-center/knowledge-base-software/">Knowledge Base</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/help-center/community-software/">Community Forums</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/help-desk-software/">Help Desk Software</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children SL_hide"><a href="/internal-help-desk/it-help-desk-software/">IT Help Desk</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/product/zendesk-security/">Security</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/product/tech-specs/">Tech Specs</a></li>
+</ul>
+</div>
+</li>
+<li id="smartling-nav-footer-resources" class="SL_swap menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children list-parent "><a href="/resources/">Resources</a>
+<div class="primary-menu-list-dropdown"><span class="pin"></span>
+<ul>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="//support.zendesk.com/hc/en-us/">Product Support</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/demo/">Request a demo</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/resources/">Library</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children SL_norewrite"><a href="/blog/">Zendesk Blog</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/support/webinars/">Live webinars</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="http://support.zendesk.com/hc/en-us/articles/203736886">Training</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children SL_hide"><a href="http://developers.zendesk.com">API &#038; Developers</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/partners/">Services &#038; Partners</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children SL_hide"><a href="/lp/retail/">For Retailers</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="https://relate.zendesk.com/">Relate by Zendesk</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/why-zendesk/customers/">Customer Stories</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/customer-experience/">Services</a></li>
+</ul>
+</div>
+</li>
+<li id="smartling-nav-footer-company" class="SL_swap menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children list-parent "><a href="/about/">Company</a>
+<div class="primary-menu-list-dropdown"><span class="pin"></span>
+<ul>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/about/">About us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/company/press/">Press</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="http://investor.zendesk.com">Investors</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/jobs/">Careers</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="http://www.neighborfoundation.org/">Neighbor Foundation</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/support/contact/">Contact Us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/sitemap/">Sitemap</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="https://status.zendesk.com">System Status</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="https://help.zendesk.com/hc/en-us">Product Help</a></li>
+</ul>
+</div>
+</li>
+<li id="smartling-nav-footer-favorites" class="SL_swap menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children list-parent "><a href="/">Favorite Things</a>
+<div class="primary-menu-list-dropdown"><span class="pin"></span>
+<ul>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/startups/">Zendesk for Startups</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children SL_hide"><a href="http://relate.zendesk.com/articles/shit-support-agents-say/">Sh*t Agents Say</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children SL_hide"><a href="https://www.youtube.com/watch?v=wPtnoRqQa5U">Zoe Calls Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/benchmark-your-support/">Zendesk Benchmark</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/small-business/">Zendesk for Small Business</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="/resources/gartner-magic-quadrant-crm/">Gartner CRM Magic Quadrant</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom no_children "><a href="https://relate.zendesk.com/education/interview-questions-hiring-great-customer-service-reps/">Hiring Great Support Teams</a></li>
+</ul>
+</div>
+</li>
+</ul>
+<div style="clear: both;"></div>
+</nav> 
+<div id="newsletter-form" class="newsletter-sub">
+<h3>Enter the Fold</h3>
+<p>Join the elite group of other people who have also signed up for our mailing list.</p>
+<form id="newsletter" class="form-gray" method="post" name="eloquaform">
+<label class="success"><span></span>Welcome to the club!</label>
+<ul>
+<li class="error">
+<div class="depth-wrap">
+<input name="owner[email]" id="owner[email]" type="text" placeholder="What&apos;s your email?" class="email">
+<a class="register"></a>
+</div>
+<label style="display: block; opacity: 1;"><span></span>Please use a valid email</label>
+</li>
+<li style="display:none">  
+<input type="hidden" name="elqFormName" id="elqFormName" value="WebsiteNewsletterSignup_new">
+</li>
+</ul>
+</form>
+<div class="l-island l-island-right social clear">
+<span itemscope itemtype="https://schema.org/Organization">
+<link itemprop="url" href="https://www.zendesk.com">
+<a itemprop="sameAs" href="//plus.google.com/+zendesk" class="ent-text ico-gplus" rel="publisher">&#59639;</a>
+<a itemprop="sameAs" href="//www.facebook.com/zendesk" class="ent-text ico-facebook">&#59636;</a>
+<a itemprop="sameAs" href="//www.twitter.com/zendesk" class="ent-text ico-twitter">&#59634;</a>
+<a itemprop="sameAs" href="//www.linkedin.com/company/zendesk" class="ent-text ico-linkedin">&#59645;</a>
+<a itemprop="sameAs" href="http://www.slideshare.net/zendesk" class="ent-text ico-slideshare"></a>
+<a itemprop="sameAs" href="//instagram.com/zendesk/" class="ent-text ico-instagram">&#59657;</a>
+</span>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="legal clear">
+<div class="col-960">
+<a href="//www.zendesk.com/company/customers-partners/#terms-of-use">Terms of Use</a>
+<a href="//www.zendesk.com/company/customers-partners/#privacy-policy">Privacy Policy</a>
+<a href="//www.zendesk.com/company/customers-partners/#cookie-policy">Cookie Policy</a>
+<a href="https://www.zendesk.com/legal/">&copy;Zendesk 2016</a>
+</div>
+</div>
+<div class="universe-search">
+<div class="universe-search-close ent-text"></div>
+<div class="col-960">
+<div class="universe-search-help"><span class="universe-search-help-count">0</span> results. <br/>How about another try?</div>
+<div class="universe-search-form">
+<span class="universe-search-icon ent-text"></span>
+<input type="text" name="search" class="universe-search-input" placeholder="Start typing to get your search on..." value=""/>
+</div>
+<div class="universe-search-results"></div>
+<div class="universe-search-pagination" style="display:none">
+<ol class="universe-search-pagination-list"> </ol>
+</div>
+</div>
+</div>
+<div class="search">
+<div class="col-960">
+<a href="javascript:;" class="search-launcher"><span class="ent-text icon"></span>Search Zendesk <span class="cursor"></span></a>
+</div>
+</div>
+<div class="clearfix"></div>
+</footer>
+ 
+<script src="//d2wy8f7a9ursnm.cloudfront.net/bugsnag-2.min.js" data-apikey="14b4da2b1698aa9ce8da80a183366f26"></script>
+<script type="text/javascript" src="//api.demandbase.com/api/v2/ip.js?key=cb334198e711721abab9b3d4c785e482544ca07f&var=dbase"></script>
+<script type="text/javascript" src="https://d1eipm3vz40hy0.cloudfront.net/js/plugins.min.9eed7a26.js"></script>
+<script type="text/javascript" src="https://d1eipm3vz40hy0.cloudfront.net/js/webutils.min.a4f9eb1c.js"></script>
+<script type="text/javascript" src="https://d1eipm3vz40hy0.cloudfront.net/js/global.min.04c36daa.js"></script>
+ 
+<script type="text/javascript">
+  webutils.styleHeader();
+  webutils.gauge();
+
+  var emeaCountryCodes = new Array('UK', 'GB', 'IM', 'GI', 'JE', 'GG', 'AT', 'BE', 'CY', 'EE', 'FI', 'FR', 'DE', 'EL', 'IE', 'IT', 'LV', 'LU', 'MT', 'NL', 'PT', 'SK', 'SI', 'ES', 'MC', 'VA', 'SM', 'ME', 'MC', 'LU', 'XK', 'KV', 'GR', 'AD')
+    , emeaDomainNames  = new Array('www.zendesk.de', 'www.zendesk.es', 'www.zendesk.fr', 'www.zendesk.it', 'www.zendesk.nl');
+
+  if((typeof dbase !== 'undefined' && $.inArray(dbase.registry_country_code, emeaCountryCodes) > -1) || $.inArray(window.location.hostname, emeaDomainNames) > -1) {
+    webutils.cookieNotice();
+  }
+
+  webutils.loadEloqua();
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	  webutils.lockTopNavigation(); // make top navigation sticky
+
+		$('iframe').css("width", "100%").css("height", "366");
+		/*
+		 * Listeners
+		 *
+		 */
+
+		 // Unhide hidden paragraphs in body
+		 $('#see-all').click(function() {
+		 	$('.resource-body .hidden').css('visibility','visible').show();
+		 	$(this).hide();
+
+		 	var path = location.pathname,
+				slash = (path.substr(path.length - 1, 1) === '/') ? '' : '/';
+
+		 	//_gaq.push(['_trackPageview', location.pathname + slash + 'converted']);
+			 ga('send', 'pageview', location.pathname + slash + 'converted');
+		 });
+
+		// Infographic overlay
+		$('#infographic').click(function(){
+			if($(window).width() < 960) {
+				var imgSrc = $(this).children('img').attr('src');
+				$(this).attr('href',imgSrc);
+			} else {
+				$(this).removeAttr('href');
+				var modal    = $('#modal-info'),
+					overlay  = $('#overlay'),
+					viewport = $(window).height()*0.5,
+					offset   = $(window).scrollTop();
+					legacy   = ($('#unsupported').length > 0);
+
+				overlay
+					.css({'background':'#000', 'position':'fixed'})
+					.show()
+					.animate({ opacity: 0.8}, 200);
+
+				modal
+					.show()
+					.css({'margin-top':'-120px'})
+					.animate({
+						'margin-top': -380,
+						opacity: 1
+					}, 250, function(){
+						if($(this).offset().top < 0)
+							modal.css('top', 380);
+					});
+
+				modal.css('top', offset + (viewport));
+
+				modal.children('.close').on('click', function(){
+					modal
+					.clearQueue()
+					.animate({
+						opacity: 0,
+						'margin-top': -190
+					}, 200, function(){
+						overlay.hide();
+						modal.hide();
+					});
+				});
+
+				overlay.on('click', function(){
+					modal
+					.clearQueue()
+					.animate({
+						opacity: 0,
+						'margin-top': -190
+					}, 200, function(){
+						overlay.hide();
+						modal.hide();
+					});
+				})
+			}
+		});
+
+	});
+</script>
+<script type="text/javascript" src="//d1eipm3vz40hy0.cloudfront.net/js/bizo.js"></script>
+<script type="text/javascript" src="https://d1eipm3vz40hy0.cloudfront.net/js/webutils.min.a4f9eb1c.js"></script>
+<script type="text/javascript" src="https://d1eipm3vz40hy0.cloudfront.net/js/resources.min.81481589.js"></script>
+<script type="text/javascript">
+  dataLayer = [];
+</script>
+ 
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-Z4DV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+ 
+<script>
+  if (!window.potentialBot) {
+    webutils.loadGTM();
+    webutils.processGA();
+    webutils.saveEloquaGuid();
+  }
+</script>
+<div id="socialBlock">
+<ul class="social">
+<li id="custom-tweet-button">
+<a title="Share on Twitter" data-network="twitter" data-action="share" href="https://twitter.com/intent/tweet?url=&text=Guide+to+Integrating+Zendesk+and+Salesforce" target="_blank">
+&#xf309;
+</a>
+</li>
+<li class="custom-fb-like">
+<a title="Share on Facebook" data-network="facebook" data-action="share" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank">
+&#xf30c;
+</a>
+</li>
+<li class="custom-li-share">
+<a title="Share on LinkedIn" data-network="linkedin" data-action="share" href="http://www.linkedin.com/shareArticle?mini=true&url=&title=Guide+to+Integrating+Zendesk+and+Salesforce" target="_blank">
+&#62232;
+</a>
+</li>
+<li class="custom-google-share">
+<a title="Share on Google+" data-network="googleplus" href="https://plus.google.com/share?url=" onclick="javascript:window.open(this.href,
+				'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+&#62223;
+</a>
+</li>
+</ul>
+</div>
+<script type="text/javascript">
+;(function() {
+	function init(){
+
+		var $window = $(window),
+				$socialblock = $('#socialBlock');
+
+		/**
+	   * On mobile we hide the social icons under a "share" cta, this method toggles them on click
+	   */
+		function showMobileShare() {
+			$socialblock.addClass('mobile-social');
+			if(!($socialblock.children('span').hasClass('share-social'))) {
+				$socialblock.append('<span class="share-social">Share</span>');
+			} else {
+				$('span.share-social').toggle(true);
+			}
+			$socialblock.children('ul').hide();
+			$('.mobile-social').on('click', function() {
+				$('span.share-social').toggle(false);
+				$('.mobile-social ul').toggle(true);
+			});
+		}
+
+		/**
+	   * On mobile we hide the social icons under a "share" cta, this method toggles them on click
+	   */
+		function destroyMobileShare() {
+			$socialblock.removeClass('mobile-social');
+			$('span.share-social').toggle(false);
+			$socialblock.children('ul').toggle(true);
+		}
+
+		$window.on('resize', function() {
+			var windowsize = $window.width();
+			if (windowsize < 699) {
+				if (!($socialblock.hasClass('mobile-social'))) {
+					showMobileShare();
+				}
+			} else {
+				if ($socialblock.hasClass('mobile-social')) {
+					destroyMobileShare();
+				}
+			}
+		});
+
+		// If they click anywhere on the page other than the social-block, hide the social icons and show 'share'
+		$(document).click(function(e) {
+			var target = e.target;
+			if (!$(target).is('#socialBlock') && !$(target).parents().is('#socialBlock')) {
+				if($socialblock.hasClass('mobile-social')) {
+					$('span.share-social').toggle(true);
+					$socialblock.children('ul').toggle(false);
+				}
+			}
+		});
+
+		$('#socialBlock a').on('click', function(){
+			var network = $(this).attr('data-network'),
+					action  = $(this).attr('data-action'),
+					target  = window.location.href;
+
+			//_gaq.push(['_trackSocial', network, action, target]);
+		});
+
+		/**
+	   * The js version of adding the correct url's to our share buttons.
+	   * This is used for the job view page which will not function on php
+	   * appendUrl adds the text as well as the url params into the request
+	   *
+	   * @param   {string}   url     The url to append to the share button req
+	   * @param   {string}   title   The title of the page to be displayed when shared
+	   */
+		function populateHrefs(url, title) {
+			url = encodeURIComponent(url);
+			title = encodeURIComponent(title);
+			function appendUtmSource(url) {
+				var a = document.createElement('a');
+				a.href = url;
+				if (! /utm_source/.test(a.search)) {
+					a.search = (a.search ? a.search + '&' : '?') + 'utm_source=shared';
+				}
+				return a.href;
+			}
+			function appendUrl(network, urlKey, titleKey) {
+				var a = $socialblock.find('[data-network="' + network + '"]');
+				var hrefSuffix = [urlKey, '=', url];
+				if (titleKey) {
+					hrefSuffix = hrefSuffix.concat('&', titleKey, '=', title);
+				}
+				a.attr('href', a.attr('href') + hrefSuffix.join(''));
+			}
+			appendUrl('twitter', 'url', 'text');
+			appendUrl('facebook', 'u');
+			appendUrl('linkedin', 'url', 'title');
+			appendUrl('googleplus', 'url');
+		}
+
+		/**
+	   * Since the php string is injected first for the blog posts,
+	   * we need to remove it in order to add the correct string for
+	   * the individual job views which require js
+	   *
+	   * @param   {object}   $element       The DOM object whose string must be truncated
+	   * @param   {string}   identifier     Everything after this char will be removed
+	   */
+		function removePHPstr($element,identifier) {
+			var strtoAppend = $element.attr('href');
+			strtoAppend = strtoAppend.substring(0, strtoAppend.indexOf(identifier)+1);
+			$element.attr('href',strtoAppend);
+		}
+		if ($('.careers-single').length) {
+			removePHPstr($('#custom-tweet-button a'),'?');
+			removePHPstr($('.custom-fb-like a'),'?');
+			removePHPstr($('.custom-li-share a'),'?mini=true');
+			removePHPstr($('.custom-google-share a'),'?');
+			// see page-jobs-single.php for use of custom event job-populated
+			$socialblock.one('job-populated', function() {
+				var title = $('.job-title').text() || document.title;
+				var jobID = window.location.search
+			    .replace(/^\?/, '')
+			    .split('&')
+			    .filter(function(param) {
+			      return /^job=/.test(param);
+			    })
+			    [0]
+			    .split('=')
+			    .pop()
+			    .replace(/[^a-zA-Z0-9]/g, '');
+				var jobviteHref = 'https://jobs.jobvite.com/zendesk/job/' + jobID;
+				populateHrefs(jobviteHref, title);
+			});
+		}
+	}
+
+	// allow loading this part before jQuery is loaded.
+	if (window.jQuery) {
+		$(init);
+	} else {
+		window.addEventListener('load', init);
+	}
+})();
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+    // Add class when max-width is mobile sized
+    var $window = $(window);
+
+    var newsletterScroll = function() {
+    var topper = $(document).scrollTop()
+      , offsetter = $('.newsletter-offsetter').offset().top - 165;
+
+    if (topper > offsetter) {
+      $('#newsletter-sub-container').addClass('fixed');
+      $('#newsletter-sub').addClass('fixed');
+    } else {
+      $('#newsletter-sub-container').removeClass('fixed');
+      $('#newsletter-sub').removeClass('fixed');
+    }
+    };
+    $window.scroll(newsletterScroll);
+    $window.resize(newsletterScroll);
+    // Back to top scroll bind
+    $(".back-to-top a").click(function() {
+      $('html, body').animate({
+        scrollTop: $("#main").offset().top
+      }, 1000);
+      return false;
+    });
+});
+</script>
+<script charset="ISO-8859-1" src="//fast.wistia.com/static/popover-v1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    // Grab Bizo profile
+    Bizo.init();
+
+    // Init form handler
+    ResourceLead.init();
+
+    $(".filter-by").click(function() {
+      $(this).toggleClass("open");
+      $(".filter-list").toggle();
+    });
+
+    $(".filter-parent").click(function() {
+      $(this).toggleClass("open").next(".filter-menu").toggle();
+    });
+
+    // sticky nav treatment
+    var $window = $(window);
+
+    var stickyScroll = function() {
+      var topper = $(document).scrollTop()
+        , offsetter = $('.sticky-nav-offsetter').offset().top - 75;
+
+      if (topper > offsetter) {
+        $('.sticky-nav').addClass('stuck');
+      } else {
+        $('.sticky-nav').removeClass('stuck');
+      }
+    };
+    $window.scroll(stickyScroll);
+    $window.resize(stickyScroll);
+});
+</script>
+</body>
+</html>

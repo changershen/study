@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-tw"  dir="ltr"
+      class="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+    <title>Twitter / 授權應用程式</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://abs-0.twimg.com/login/tfw-base.c00ccbe52fc5680544a65d64aa0e639fa94ded85.css">
+    <!--[if (IEMobile) & (lt IE 9)]>
+      <link href="https://abs-0.twimg.com/login/phoenix-iemobile.104678bc7c9a0fb1f16229c5bb8c4288c0e1b560.css" media="screen" rel="stylesheet" type="text/css" />
+    <![endif]-->
+        <meta name="mswebdialog-title" content="Twitter"><meta name="mswebdialog-logo" content="https://abs.twimg.com/favicons/win8-auth-60.png"><meta name="mswebdialog-header-color" content="#202020"><meta name="mswebdialog-newwindowurl" content="*">
+
+
+      <script src="//abs-0.twimg.com/login/base.ace79779943a820cbcf0cd70ea0a24af08aac412.js" type="text/javascript"></script>
+      <script src="//abs-0.twimg.com/login/authorize_page.c4edf9ccaf94a42b6963991691957aaa827aa56b.js" type="text/javascript"></script>
+  </head>
+  
+  
+  <body class="oauth  tfw zh-tw logged-out    noloki">
+
+    <div id="header" role="banner">
+      <div class="bar">
+        <h1 class="logo">
+          <a class="alternate-context" href="https://twitter.com/home">Twitter</a>
+        </h1>
+
+        <div id="not-logged-in">
+              <a href="https://twitter.com/signup?context=oauth&amp;oauth_token=Z3AsEgAAAAAAjkm1AAABWXLPN-o" class="register alternate-context">註冊 Twitter</a>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="bd" role="main">
+          
+
+
+
+
+    <div class="auth">
+      <h2>要授權 Relate by Zendesk 使用你的帳戶嗎？</h2>
+
+      <div class="app-info" role="content-info" tabindex="0">
+  <h3>
+    <img alt="" class="app-icon" src="https://pbs.twimg.com/app_img/683736303100391424/8iAx84Vi?format=png&amp;name=73x73" title="Relate by Zendesk by  Zendesk">
+    Relate by Zendesk
+  </h3>
+  <dl>
+      <dt class="dev">開發者</dt>
+      <dd class="dev">由  Zendesk</dd>
+      <dt class="url">應用程序網址</dt>
+      <dd class="url">relate.zendesk.com</dd>
+      <dt class="notes">關於這個應用程序</dt>
+      <dd class="notes"><p>Relate is home to a diverse selection of expert content from Zendesk. It blends customer service software with the human desire for better relationships.</p></dd>
+      <dt class="terms">隱私權政策</dt>
+      <dd class="terms"><p><a href="https://www.zendesk.com/company/privacy">隱私權政策</a></p></dd>
+      <dt class="terms">條款和條件</dt>
+      <dd class="terms"><p><a href="https://www.zendesk.com/company/terms">條款和條件</a></p></dd>
+
+  </dl>
+</div>
+
+      <form action="https://api.twitter.com/oauth/authenticate" id="oauth_form" method="post" target="_self">
+        <div>
+          <input name="authenticity_token" type="hidden" value="9a60c43c1762adc06903ced77e68fcb9a1207d20">
+          <input name="redirect_after_login" type="hidden" value="https://api.twitter.com/oauth/authenticate?oauth_token=Z3AsEgAAAAAAjkm1AAABWXLPN-o">
+        </div>
+
+        <input id="oauth_token" name="oauth_token" type="hidden" value="Z3AsEgAAAAAAjkm1AAABWXLPN-o">
+
+          <fieldset class="sign-in">
+  <legend>登入 Twitter</legend>
+  <div class="row user ">
+    <label for="username_or_email" tabindex="-1">使用者名稱或電子郵件</label>
+    <input aria-required="true" autocapitalize="off" autocorrect="off" autofocus="autofocus" class="text" id="username_or_email" name="session[username_or_email]" type="text" value="">
+  </div>
+  <div class="row password ">
+    <label for="password" tabindex="-1">密碼</label>
+    <input aria-required="true" class="password text"  id="password" name="session[password]" type="password" value="">
+  </div>
+  <p>
+    <input type="checkbox" name="remember_me" id="remember" value="1">
+    <label for="remember">記住我</label>
+    &middot;
+    <a href="https://twitter.com/account/resend_password" class="alternate-context" target="_blank">忘記了密碼?</a>
+  </p>
+</fieldset>
+
+
+        <fieldset class="buttons">
+          <legend>使用你的帳戶登入 Relate by Zendesk？</legend>
+          <input type="submit" value="登入" class="submit button selected" id="allow">
+
+            <input class="submit button" id="cancel" name="cancel" type="submit" value="取消">
+
+        </fieldset>
+      </form>
+
+      
+<div class="permissions allow">
+  <p><strong>此應用程式將可以：</strong></p>
+  <ul>
+      <li>從您的時間軸上讀取推文。</li>
+
+
+      <li>看看你關注了哪些人。</li>
+
+
+        <li>查看你的電子郵件地址。</li>
+
+  </ul>
+</div>
+      <div class="permissions deny">
+  <p><strong>將無法：</strong></p>
+  <ul>
+      <li>關注新的人們。</li>
+      <li>更新您的個人檔案</li>
+      <li>為你發佈推文。</li>
+
+      <li>存取你的私人訊息。</li>
+
+
+    <li>查看您的 Twitter 密碼。</li>
+  </ul>
+</div>
+
+    </div>
+
+    </div>
+
+
+  <div class="footer" role="navigation"><div id="ft">
+    
+        
+  <p class="tip">你隨時可以從「設定」頁面的<a href="https://twitter.com/settings/applications" target="_blank">應用程式標籤</a>中，撤銷任何應用程式的存取權。</p>
+  <p><small>如果授權給某個應用程式，你的任何操作仍將根據 <a href="https://twitter.com/tos" target="_blank">Twitter 的服務條款</a>繼續進行。尤其，部分使用資訊將會回傳並與 Twitter 分享。如需詳細資訊，請參閱握門的<a href="https://twitter.com/privacy" target="_blank">隱私政策</a>。</small></p>
+
+
+
+
+  </div></div>
+
+  </body>
+</html>
