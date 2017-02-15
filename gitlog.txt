@@ -69,6 +69,7 @@ git checkout -b <name>创建+切换分支：
 git merge <name>合并某分支到当前分支：
 git branch -d <name>删除分支：
 git branch -D <name>强行删除
+git push origin :branch-name 远程删除分支推送一个空分支即使删除分支
 
 冲突在子分支上进行一次commit，然后再master上进行一次commit，然后分支合并
 出现异常需要手动去编辑文本然后再次add commit。
